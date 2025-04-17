@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    /* 启用ES模块与非ES模块的转换 */
+    "esModuleInterop": true,
+    /* 是否生成映射文件 */
+    "sourceMap": true,
+    /* 目标编译版本为最新的ECMAScript规范 */
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    /* 设置模块的编译方式，为ES6 */
+    "module": "ESNext",
+    /* 项目依赖的库 */
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+     /* 是否跳过对类型声明文件的类型检查 */
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    /* 设置模块的解析方式为node */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    /* 允许导入json模块 */
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    /* 设置jsx的语法处理方式为保留原样 */
+    "jsx": "preserve",
+
+    /* Linting */
+    "strict": true,
+    /* 禁止未使用的局部变量 */
+    "noUnusedLocals": true,
+    /* 禁止未使用的函数参数 */
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    /* 允许使用js */
+    "allowJs": true,
+    /* 允许从没有默认导出的文件中导入模块 */
+    "allowSyntheticDefaultImports": true,
+    /* 项目的根目录，相对path路径 */
+    "baseUrl": "./",
+    "types": [
+      "vite/client",
+      "./src/shims-amap",
+      "three"
+    ],
+    "paths": {
+      "*": [
+        "*",
+        "src/*",
+        "src/types/*",
+        "node_modules/*"
+      ],
+      "@//*": ["src/*"], // 配置别名
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./typings.d.ts", "./types"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/types/**/*.d.ts" , "types/**/*.d.ts", "typings.d.ts", "src/utils/index.js", "src/types/tencent-cloud.d.ts",],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

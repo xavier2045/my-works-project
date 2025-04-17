@@ -1,0 +1,82 @@
+[
+  {
+    "bankIds": ["6202", "6222", "6235"],
+    "bankCode": "ICBC",
+    "bankName": "中国工商银行"
+  },
+  {
+    "bankIds": ["4367", "6227", "6218"],
+    "bankCode": "CCB",
+    "bankName": "中国建设银行"
+  },
+  {
+    "bankIds": ["6214", "6230", "6225"],
+    "bankCode": "ABC",
+    "bankName": "中国农业银行"
+  },
+  {
+    "bankIds": ["6217", "6229", "6205"],
+    "bankCode": "BOC",
+    "bankName": "中国银行"
+  },
+  {
+    "bankIds": ["6210", "6224"],
+    "bankCode": "BCM",
+    "bankName": "交通银行"
+  },
+  {
+    "bankIds": ["6221", "6211"],
+    "bankCode": "CMB",
+    "bankName": "招商银行"
+  },
+  {
+    "bankIds": ["6213", "6232"],
+    "bankCode": "PSBC",
+    "bankName": "中国邮政储蓄银行"
+  },
+  {
+    "bankIds": ["6216", "6220"],
+    "bankCode": "CMBC",
+    "bankName": "中国民生银行"
+  },
+  {
+    "bankIds": ["6223", "6236"],
+    "bankCode": "CIB",
+    "bankName": "兴业银行"
+  },
+  {
+    "bankIds": ["6212", "6228"],
+    "bankCode": "SPDB",
+    "bankName": "上海浦东发展银行"
+  },
+  {
+    "bankIds": ["6226", "6237"],
+    "bankCode": "GDB",
+    "bankName": "广发银行"
+  },
+  {
+    "bankIds": ["6231", "6208"],
+    "bankCode": "CEB",
+    "bankName": "中国光大银行"
+  },
+  {
+    "bankIds": ["6219", "6238"],
+    "bankCode": "HXB",
+    "bankName": "华夏银行"
+  },
+  {
+    "bankIds": ["6228", "6209"],
+    "bankCode": "CZB",
+    "bankName": "浙商银行"
+  },
+  {
+    "bankIds": ["6215", "6239"],
+    "bankCode": "BOB",
+    "bankName": "北京银行"
+  },
+  {
+    "bankIds": ["6233", "6240"],
+    "bankCode": "BOS",
+    "bankName": "上海银行"
+  }
+]

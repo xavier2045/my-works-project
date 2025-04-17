@@ -1,0 +1,130 @@
+// CSS属性定义
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --rotation {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+// 浮动动画
+@keyframes float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(8px, -12px) rotate(2deg) scale(1.02);
+  }
+  50% {
+    transform: translate(-5px, -15px) rotate(-1deg) scale(1);
+  }
+  75% {
+    transform: translate(-10px, -8px) rotate(-3deg) scale(0.98);
+  }
+}
+
+// 脉冲点动画
+@keyframes pulseDot {
+  0% {
+    opacity: 0;
+    offset-distance: 100%;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    offset-distance: 0%;
+  }
+}
+
+// 主球核心动画
+@keyframes mainNucleusHover {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.95);
+    filter: hue-rotate(0deg) brightness(1.2);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    filter: hue-rotate(180deg) brightness(1.4);
+  }
+}
+
+// 细胞核动画
+@keyframes nucleusPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 
+      inset 0 0 25px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.4);
+  }
+}
+
+// 细胞质动画
+@keyframes cytoplasmFlow {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+// 细胞核内部结构动画
+@keyframes nucleusInner {
+  0%, 100% {
+    transform: translate(0, 0) scale(0.9);
+  }
+  50% {
+    transform: translate(5px, 5px) scale(1.1);
+  }
+}
+
+// 神经元脉冲动画
+@keyframes neuronPulse {
+  0%, 100% { 
+    transform: scale(1) rotate(var(--rotation)); 
+  }
+  50% { 
+    transform: scale(1.1) rotate(calc(var(--rotation) + 5deg)); 
+  }
+}
+
+// 波纹效果动画
+@keyframes rippleEffect {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2.8);
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+// 发光边缘旋转动画
+@keyframes rotateGlow {
+  to { 
+    --angle: 360deg; 
+  }
+} 

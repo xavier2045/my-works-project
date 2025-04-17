@@ -1,0 +1,1007 @@
+.execute{
+    width: 100%;
+    height: calc(100% - 30px);
+    .execute-container{
+      width: 100%;
+      height: 100%;
+      .execute-header{
+        width: calc(100% - 30px);
+        height: auto;
+        margin: 0 0 0 30px;
+        // padding-bottom: 25px;
+        .execute-header-flex{
+          width: 100%;
+          height: auto;
+          display: flex;
+          .execute-header-flex-l{
+            height: auto;
+            flex-shrink: 0;
+            .execute-header-flex-l-main{
+              width: 100%;
+              height: auto;
+              
+              .execute-header-flex-l-main-previous{
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                .previous-icon{
+                  width: 24px;
+                  height: auto;
+                  flex-shrink: 0;
+                  margin-right: 37px;
+                  cursor: pointer;
+                  i{
+                    font-size: 24px;
+                    color: #FFFFFF;
+                    display: block;
+                    line-height: 52px;
+                    text-align: center;
+                  }
+                }
+                .previous-info{
+                  flex: 1;
+                  .previous-info-main{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    .previous-info-main-cover{
+                      width: 52px;
+                      height: 52px;
+                      flex-shrink: 0;
+                      border-radius: 50%;
+                      margin-right: 14px;
+                      overflow: hidden;
+                      img{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                      }
+                    }
+                    .previous-info-main-text{
+                      flex: 1;
+                      .previous-info-main-text-name{
+                        font-size: 20px;
+                        color: #FFFFFF;
+                        line-height: 1;
+                        text-align: left;
+                        margin-bottom: 11px;
+                      }
+                      .previous-info-main-text-admin{
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        line-height: 1;
+                        text-align: left;
+                      }
+                    }
+                  }
+                }
+              }
+              .flex-l-main-typeList{
+                width: auto;
+                height: auto;
+                margin-right: 30px;
+                display: inline-block;
+                &:last-child{
+                  margin-right: 0;
+                }
+                .flex-l-main-typeList-item{
+                  cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  .flex-l-main-typeList-item-icon{
+                    width: 24px;
+                    height: auto;
+                    margin-right: 7px;
+                    i{
+                      font-size: 24px;
+                      color: #FFFFFF;
+                      display: block;
+                      line-height: 24px;
+                    }
+                  }
+                  .flex-l-main-typeList-item-text{
+                    display: inline-block;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: rgb(255, 255, 255, .7);
+                    line-height: 24px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                    margin-right: 5px;
+                    white-space: nowrap;
+                  }
+                  .flex-l-main-typeList-item-line{
+                    width: auto;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    line-height: 24px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                  }
+                }
+              }
+            }
+          }
+          .execute-header-flex-c{
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+          }
+          .execute-header-flex-r{
+            height: auto;
+            flex-shrink: 0;
+            .execute-header-flex-r-main{
+              width: 100%;
+              height: auto;
+              display: flex;
+              justify-content: space-between;
+              .head-body-flex{
+                width: 144px;
+                flex-shrink: 0;
+                display: flex;
+                justify-content: space-between;
+                .body-flex-item{
+                  width: 32px;
+                  margin-left: 16px;
+                  cursor: pointer;
+                  &:hover{
+                    i{
+                      color: rgba(255, 255, 255, 1);
+                    }
+                  }
+                  i{
+                    font-size: 32px;
+                    color: rgba(255, 255, 255, .6);
+                    display: block;
+                    position: relative;
+                    line-height: 46px;
+                    span{
+                      width: 6px;
+                      height: 6px;
+                      border-radius: 50%;
+                      display: inline-block;
+                      background-color: #f00;
+                      position: absolute;
+                      top: 15px;
+                      right: 5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .execute-content{
+        width: 100%;
+        height: calc(100% - 78px);
+        overflow-y: auto;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .execute-content-main{
+          height: auto;
+          padding: 0 32px 0 32px;
+          display: flex;
+          .execute-content-main-body{
+            flex: 1;
+            width: 0;
+            .main-body-content{
+                width: 100%;
+                height: 100%;
+                .main-body-content-banner{
+                    width: 100%;
+                    height: auto;
+                    .banner-main{
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    .banner-main-cover{
+                        width: 100%;
+                        height: 163px;
+                        img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 28px;
+                        }
+                    }
+                    .banner-title{
+                        width: 100%;
+                        height: 100%;
+                        font-size: 72px;
+                        color: #FFFFFF;
+                        line-height: 163px;
+                        text-align: center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    .daoType{
+                        width: 40px;
+                        height: 40px;
+                        position: absolute;
+                        right: 20px;
+                        bottom: 20px;
+                        img{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        }
+                    }
+                    }
+                }
+                .main-body-content-timeline{
+                    width: 100%;
+                    height: 223px;
+                    margin-top: 20px;
+                    position: relative;
+                    .timeline-content{
+                        width: 100%;
+                        height: 100%;
+                        mask-image: url(@/assets/images/task/pers_kanban_prog_bg1.png);
+                        -webkit-mask-image: url(@/assets/images/task/pers_kanban_prog_bg1.png);
+                        mask-repeat: no-repeat;
+                        -webkit-mask-repeat: no-repeat;
+                        mask-size: 100% 100%;
+                        background-color: rgb(255, 255, 255, .12);
+                        backdrop-filter: blur(32px);
+                        background-image: url(@/assets/images/task/pers_kanban_prog_bg2.png);
+                        background-size: 100% 100%;
+                    }
+                    .timeline-content-m{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                        .module-heaer{
+                            width: 100%;
+                            height: 40px;
+                            .module-heaer-content{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                position: relative;
+                                z-index: 9;
+                                .heaer-content-l{
+                                    flex: 1;
+                                    width: 0;
+                                    .content-l-m{
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        .currentYear{
+                                            width: 73px;
+                                            height: 34px;
+                                            font-size: 16px;
+                                            line-height: 35px;
+                                            text-align: center;
+                                            color: rgb(255, 255, 255, 1);
+                                            border-radius: 8px 8px 0 8px;
+                                            background-color: rgb(255, 255, 255, .2);
+                                            backdrop-filter: blur(32px);
+                                            border: 1px solid rgba(255, 255, 255, .38);
+                                        }
+                                        .data-type{
+                                            margin-left: 15px;
+                                            display: inline-block;
+                                            .typeData{
+                                                display: inline-block;
+                                                .typeData-main{
+                                                    width: auto;
+                                                    display: flex;
+                                                    justify-content: flex-start;
+                                                    .typeData-main-item{
+                                                        margin-right: 10px;
+                                                        display:inline-block;
+                                                        display: flex;
+                                                        i{
+                                                        font-size: 20px;
+                                                        color: rgb(255, 255, 255, .7);
+                                                        display: inline-block;
+                                                        margin-right: 5px;
+                                                        line-height: 38px;
+                                                        }
+                                                        span{
+                                                        font-weight: 400;
+                                                        font-size: 12px;
+                                                        color: rgb(255, 255, 255, .7);
+                                                        line-height: 38px;
+                                                        text-align: left;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .time-select{
+                                            width: 147px;
+                                            height: 34px;
+                                            margin: 0 0 0 5px;
+                                            border-radius: 6px 6px 4px 4px;
+                                            background-color: rgb(255, 255, 255, .2);
+                                            backdrop-filter: blur(32px);
+                                            border: 1px solid rgba(255, 255, 255, .38);
+                                            .daoAdmin{
+                                              width: 100%;
+                                              height: 100%;
+                                              display: flex;
+                                              justify-content: center;
+                                              .daoAdmin-avatar{
+                                                width: 34px;
+                                                height: 34px;
+                                                flex-shrink: 0;
+                                                border-radius: 50%;
+                                                background: url(@/assets/images/task/avatar_bg.png) no-repeat center center;
+                                                background-size: 100% 100%;
+                                                :deep(.el-image, img) {
+                                                  width: 70%;
+                                                  height: 70%;
+                                                  border-radius: 50%;
+                                                  display: block;
+                                                  margin: 15% auto;
+                                                }
+                                              }
+                                              .daoAdmin-name{
+                                                font-size: 14px;
+                                                color: #FFFFFF;
+                                                line-height: 34px;
+                                                text-align: left;
+                                                margin-left: 5px;
+                                              }
+                                            }
+                                        }
+                                    }
+                                }
+                                .time-selece{
+                                    width: 108px;
+                                    height: auto;
+                                    margin: 10px 10px 0 0;
+                                    .timeData{
+                                        width: 108px;
+                                        height: 24px;
+                                        overflow: hidden;
+                                        border-radius: 6px;
+                                        border: 1px solid rgb(255, 255, 255, .38);
+                                        .timeData-main{
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            .timeData-main-item{
+                                                width: 33.333%;
+                                                height: 24px;
+                                                font-weight: 400;
+                                                font-size: 16px;
+                                                color: rgb(255, 255, 255, .7);
+                                                line-height: 24px;
+                                                text-align: center;
+                                                cursor: pointer;
+                                                background-color: rgb(255, 255, 255, .1);
+                                                border-right: 1px solid rgba(255, 255, 255, 0.38);
+                                                backdrop-filter: blur(32px);
+                                                &:hover{
+                                                    background-color: rgb(0, 0, 0, .18);
+                                                    backdrop-filter: blur(32px);
+                                                }
+                                                &:last-child{
+                                                    border-right: none;
+                                                }
+                                            }
+                                            .active{
+                                                color: #FFFFFF;
+                                                background-color: rgb(0, 0, 0, .18);
+                                                backdrop-filter: blur(32px);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                        .module-body{
+                            width: 100%;
+                            height: 133px;
+                            .module-body-content{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                .module-body-content-timeline{
+                                    flex: 1;
+                                    width: 0;
+                                    height: 100%;
+                                    .timeline-main{
+                                      width: 100%;
+                                      height: 100%;
+                                      display: flex;
+                                      .timeline-main-legend{
+                                        width: 130px;
+                                        height: 100%;
+                                        margin-right: 10px;
+                                        flex-shrink: 0;
+                                        .legend-main{
+                                          width: 100%;
+                                          height: 100%;
+                                          .legend-main-item{
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            justify-content: center;
+                                            margin-bottom: 24px;
+                                            &:nth-child(1){
+                                              margin-top: 40px;
+                                              .item-main-icon{
+                                                i{
+                                                  background: radial-gradient(100% 0% at 0% 0%, #F8507B 0%, #D9072F 58%, #A7071E 97%);
+                                                  background-clip: text;
+                                                  -webkit-background-clip: text;
+                                                  -webkit-text-fill-color: transparent;
+                                                  font-size: 20px; // 根据需要调整字体大小
+                                                  display: block;
+                                                  line-height: 20px; // 根据需要调整行高
+                                                }
+                                              }
+                                            }
+                                            &:nth-child(2){
+                                              .item-main-icon{
+                                                i{
+                                                  background: radial-gradient(100% 0% at 0% 0%, #ebd8b1 0%, #efc97c 58%, #e8bd67 97%);
+                                                  background-clip: text;
+                                                  -webkit-background-clip: text;
+                                                  -webkit-text-fill-color: transparent;
+                                                  font-size: 20px; // 根据需要调整字体大小
+                                                  display: block;
+                                                  line-height: 20px; // 根据需要调整行高
+                                                }
+                                              }
+                                            }
+                                            &:nth-child(3){
+                                              margin-bottom: 0;
+                                              .item-main-icon{
+                                                i{
+                                                  background: radial-gradient(100% 0% at 0% 0%, #00A0FF 0%, #5FD0FF 100%);
+                                                  background-clip: text;
+                                                  -webkit-background-clip: text;
+                                                  -webkit-text-fill-color: transparent;
+                                                  font-size: 20px; // 根据需要调整字体大小
+                                                  display: block;
+                                                  line-height: 20px; // 根据需要调整行高
+                                                }
+                                              }
+                                            }
+                                            .item-main-icon{
+                                              width: 20px;
+                                              height: 20px;
+                                              margin-right: 10px;
+                                            }
+                                            .item-main-name{
+                                              font-weight: 400;
+                                              font-size: 12px;
+                                              color: #FFFFFF;
+                                              line-height: 20px;
+                                              text-align: left;
+                                            }
+                                          }
+                                        }
+                                      }
+                                      .timeline-main-content{
+                                        flex: 1;
+                                        width: 0;
+                                        height: 100%;
+                                      }
+                                    }
+                                }
+                                .module-body-content-avatar{
+                                    width: 80px;
+                                    height: 80px;
+                                    margin: 20px;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        display: block;
+                                        border-radius: 12px;
+                                    }
+                                    :deep(.el-image, img) {
+                                      width: 100%;
+                                      height: 100%;
+                                      display: block;
+                                      border-radius: 12px;
+                                    }
+                                }
+                            }
+                        }
+                        .module-footer{
+                          width: 100%;
+                          height: 50px;
+                          position: relative;
+                          .module-footer-content{
+                            width: 100%;
+                            height: 100%;
+                            .content-btn{
+                              width: 100%;
+                              display: flex;
+                              justify-content: center;
+                              .item-button{
+                                width: 99px;
+                                height: 47px;
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: rgb(255, 255, 255, .7);
+                                line-height: 47px;
+                                text-align: center;
+                                cursor: pointer;
+                                margin-right: 0;
+                                &:hover{
+                                  color: rgb(255, 255, 255, 1);
+                                }
+                              }
+                            }
+                          }
+                          .select-user{
+                            width: 100px;
+                            height: auto;
+                            position: absolute;
+                            top: 0;
+                            right: 20px;
+                            .user-content{
+                              width: 100%;
+                              height: auto;
+                              display: flex;
+                              justify-content: flex-start;
+                              .user-avatar{
+                                width: 42px;
+                                height: 42px;
+                                flex-shrink: 0;
+                                border-radius: 50%;
+                                background: url(@/assets/images/task/avatar_bg.png) no-repeat center center;
+                                background-size: 100% 100%;
+                                :deep(.el-image, img) {
+                                  width: 70%;
+                                  height: 70%;
+                                  border-radius: 50%;
+                                  display: block;
+                                  margin: 15% auto;
+                                }
+                              }
+                              .user-info{
+                                flex: 1;
+                                width: 0;
+                                .userName{
+                                  font-size: 14px;
+                                  color: #FFFFFF;
+                                  line-height: 1;
+                                  text-align: left;
+                                  margin: 5px 0;
+                                }
+                                .userUuid{
+                                  font-size: 12px;
+                                  color: #FFFFFF;
+                                  line-height: 1;
+                                  text-align: left;
+                                }
+                              }
+                            }
+                          }
+                        }
+                    }
+                }
+                .main-body-content-footer{
+                    width: 100%;
+                    height: auto;
+                    margin-top: 20px;
+                    .footer-content{
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        .content-data-list{
+                            flex: 1;
+                            width: 0;
+                            height: 449px;
+                            position: relative;
+                            .content-data-list-bg{
+                              width: 100%;
+                              height: 100%;
+                              box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3), -1px -1px 6px rgba(255, 255, 255, 0.6);
+                              .list-item-main{
+                                width: 100%;
+                                height: 100%;
+                                .filterList-selece{
+                                  width: calc(100% - 90px);
+                                  height: 40px;
+                                  flex: 0 0 auto;
+                                  flex-shrink: 0;
+                                  margin-left: 90px;
+                                  display: flex;
+                                  justify-content: space-around;
+                                  .list-item-main-content{
+                                    width: 33.333%;
+                                    height: auto;
+                                    box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.5);
+                                    border: 1px solid rgba(0, 0, 0, 0.01);
+                                    background: rgba(0, 0, 0, 0.2);
+                                    backdrop-filter: blur(9px);
+                                    border-right: none;
+                                    cursor: pointer;
+                                    &:first-child{
+                                      border-radius: 6px 0 0 0;
+                                    }
+                                    .content-item-icon{
+                                      width: 100%;
+                                      height: 100%;
+                                      i{
+                                        display: block;
+                                        font-size: 24px;
+                                        line-height: 40px;
+                                        text-align: center;
+                                        color: rgb(255, 255, 255, .7);
+                                      }
+                                    }
+                                  }
+                                  .list-item-main-content-two{
+                                    width: 50% !important;
+                                  }
+                                  .flag{
+                                    box-shadow: inherit;
+                                    border: none;
+                                    cursor: inherit;
+                                    background: inherit;
+                                    backdrop-filter: inherit;
+                                    transition: all 0.3s;
+                                  }
+                                }
+                                .filterList-list{
+                                  width: 100%;
+                                  height: calc(100% - 40px);
+                                  .filterList-list-main{
+                                    width: 100%;
+                                    height: 100%;
+                                    .filter-criteria{
+                                      width: 100%;
+                                      height: 100%;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                            .ctt_big_bg{
+                              width: 100%;
+                              mask-image: url(@/assets/images/task/kanban_list_big_bg.png);
+                              -webkit-mask-image: url(@/assets/images/task/kanban_list_big_bg.png);
+                              mask-repeat: no-repeat;
+                              -webkit-mask-repeat: no-repeat;
+                              mask-size: 100% 100%;
+                              background-color: rgb(255, 255, 255, .02);
+                              backdrop-filter: blur(32px);
+                              background-image: url(@/assets/images/task/kanban_list_big_bg1.png);
+                              background-size: 100% 100%;
+                            }
+                            .ctt_small_bg{
+                              width: 100%;
+                              mask-image: url(@/assets/images/task/kanban_list_bg1.png);
+                              -webkit-mask-image: url(@/assets/images/task/kanban_list_bg1.png);
+                              mask-repeat: no-repeat;
+                              -webkit-mask-repeat: no-repeat;
+                              mask-size: 100% 100%;
+                              background-color: rgb(255, 255, 255, .02);
+                              backdrop-filter: blur(32px);
+                              background-image: url(@/assets/images/task/kanban_list_bg2.png);
+                              background-size: 100% 100%;
+                            }
+                            .list-title{
+                              width: 85px;
+                              height: 34px;
+                              font-size: 16px;
+                              line-height: 35px;
+                              text-align: center;
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              z-index: 1;
+                              color: rgb(255, 255, 255, 1);
+                              border-radius: 8px 8px 0 8px;
+                              background-color: rgb(255, 255, 255, .2);
+                              backdrop-filter: blur(32px);
+                              border: 1px solid rgba(255, 255, 255, .38);
+                            }
+                        }
+                        .footer-right{
+                            width: 274px;
+                            height: 449px;
+                            margin-left: 20px;
+                            .footer-right-content{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                .rtsk-module{
+                                    width: 100%;
+                                    height: 230px;
+                                    flex-shrink: 0;
+                                    .rtsk-module-main{
+                                      width: 100%;
+                                      height: 100%;
+                                      display: flex;
+                                      flex-direction: column;
+                                      .rtsk-module-title{
+                                        width: 100%;
+                                        height: 30px;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        color: #FFFFFF;
+                                        line-height: 1;
+                                        text-align: left;
+                                      }
+                                      .rtsk-module-content{
+                                        flex: 1;
+                                      }
+                                    }
+                                    
+                                }
+                                .taskp-module{
+                                    width: 100%;
+                                    flex: 1;
+                                    margin-top: 0px;
+                                    .taskp-module-main{
+                                      width: 100%;
+                                      height: 100%;
+                                      display: flex;
+                                      border-radius: 28px;
+                                      flex-direction: column;
+                                      background-color: rgb(255, 255, 255, .02);
+                                      backdrop-filter: blur(32px);
+                                      box-shadow: 8px 8px 18px 8px rgb(0, 0, 0, .18);
+                                      border: 1px solid rgba(255, 255, 255, .38);
+                                      .taskp-module-title{
+                                        width: 100%;
+                                        height: 30px;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        color: #FFFFFF;
+                                        line-height: 1;
+                                        text-align: left;
+                                        flex-shrink: 0;
+                                        padding: 15px 0 0 15px;
+                                      }
+                                      .taskp-module-content{
+                                        flex: 1;
+                                        padding: 0 15px 15px 15px;
+                                        .task-progress{
+                                          width: 100%;
+                                          height: 100%;
+                                          max-height: 150px;
+                                          .task-progress-item{
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            margin-top: 10px;
+                                            .task-progress-bar{
+                                              flex: 1;
+                                              width: 0;
+                                            }
+                                            .task-progress-icon{
+                                              width: 30px;
+                                              height: auto;
+                                              flex-shrink: 0;
+                                              margin-left: 10px;
+                                              img{
+                                                width: 30px;
+                                                height: auto;
+                                                display: block;
+                                                border-radius: 50%;
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+          }
+          .execute-content-main-sidebar{
+            width: 387px;
+            height: 100%;
+            flex-shrink: 0;
+            margin-left: 30px;
+            .sidebar-content{
+              width: 100%;
+              height: 100%;
+              .sidebar-content-t{
+                width: 100%;
+                height: 250px;
+                .sidebar-content-t-main{
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: space-between;
+                  .latest-node{
+                    width: 50%;
+                    height: 100%;
+                    .latest-node-main{
+                      width: 100%;
+                      height: 100%;
+                      display: flex;
+                      flex-direction: column;
+                      .latest-node-title{
+                        width: 100%;
+                        height: 30px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        line-height: 1;
+                        text-align: left;
+                      }
+                      .latest-node-content{
+                        flex: 1;
+                      }
+                    }
+                  }
+                  .latest-proposal{
+                    width: 50%;
+                    height: 100%;
+                    .latest-proposal-main{
+                      width: 100%;
+                      height: 100%;
+                      display: flex;
+                      flex-direction: column;
+                      .latest-proposal-title{
+                        width: 100%;
+                        height: 30px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        line-height: 1;
+                        text-align: left;
+                      }
+                      .latest-proposal-content{
+                        flex: 1;
+                      }
+                    }
+                  }
+                }
+              }
+              .sidebar-content-c{
+                width: 100%;
+                height: 367px;
+                margin: 20px 0;
+                border-radius: 28px;
+                background-color: rgb(255, 255, 255, .02);
+                backdrop-filter: blur(32px);
+                box-shadow: 8px 8px 18px 8px rgb(0, 0, 0, .18);
+                border: 1px solid rgba(255, 255, 255, .38);
+              }
+              .sidebar-content-b{
+                width: 100%;
+                .rtsk-module{
+                  width: 100%;
+                  height: 230px;
+                  .rtsk-module-main{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .rtsk-module-title{
+                      width: 100%;
+                      height: 30px;
+                      font-weight: 400;
+                      font-size: 16px;
+                      color: #FFFFFF;
+                      line-height: 1;
+                      text-align: left;
+                    }
+                    .rtsk-module-content{
+                      flex: 1;
+                    }
+                  }
+                }
+                .team-member{
+                  width: 100%;
+                  height: 215px;
+                  border-radius: 28px;
+                  background-color: rgb(255, 255, 255, .02);
+                  backdrop-filter: blur(32px);
+                  box-shadow: 8px 8px 18px 8px rgb(0, 0, 0, .18);
+                  border: 1px solid rgba(255, 255, 255, .38);
+                  .team-member-main{
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    .team-member-title{
+                      width: 100%;
+                      height: 30px;
+                      font-weight: 400;
+                      font-size: 16px;
+                      color: #FFFFFF;
+                      line-height: 1;
+                      text-align: left;
+                      flex-shrink: 0;
+                    }
+                    .team-member-content{
+                      flex: 1;
+                      .team-member-content-main{
+                        width: 100%;
+                        height: 155px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        .team-member-item{
+                          width: 33.333%;
+                          height: auto;
+                          .team-member-item-main{
+                            width: 100%;
+                            height: auto;
+                            .team-member-item-tag{  
+                              width: 80px;
+                              height: 38px;
+                              margin: 0 auto;
+                              font-size: 12px;
+                              color: rgb(255, 255, 255, 68);
+                              text-align: center;
+                              line-height: 25px;
+                              background: url(@/assets/images/task/tag.png) no-repeat center center;
+                              background-size: 100% 100%;
+                            }
+                            .team-member-item-avatar{
+                              width: 92px;
+                              height: 92px;
+                              flex-shrink: 0;
+                              margin: 0 auto;
+                              border-radius: 50%;
+                              background: url(@/assets/images/task/avatar_bg.png) no-repeat center center;
+                              background-size: 100% 100%;
+                              position: relative;
+                              :deep(.el-image, img) {
+                                width: 70%;
+                                height: 70%;
+                                border-radius: 50%;
+                                margin: 15%;
+                                object-fit: cover;
+                              }
+                              .team-member-item-tag-masking{
+                                width: 72px;
+                                height: auto;
+                                position: absolute;
+                                top: 11px;
+                                left: 9px;
+                                right: 0;
+                                bottom: 0;
+                                z-index: 0;
+                                img{
+                                  width: 100%;
+                                  height: auto;
+                                  margin: 0;
+                                  object-fit: cover;
+                                  border-radius: inherit;
+                                }
+                              }
+                            }
+                            .team-member-item-name{
+                              font-weight: 400;
+                              font-size: 14px;
+                              color: #FFFFFF;
+                              line-height: 1;
+                              text-align: center;
+                            }
+                          }
+                        }
+                      }
+                      
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

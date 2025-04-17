@@ -1,0 +1,900 @@
+.personalCenter{
+    height: 100%;
+    padding-left: 20px;
+    .personalCenter-main{
+        width: 100%;
+        height: calc(100% - 116px);
+        .personalCenter-main-centrt{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            .module-title{
+                width: calc( 100% - 23px);
+                height: auto;
+                margin-top: 11px;
+                padding-left: 23px;
+                .module-title-main{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    .module-title-main-l{
+                        flex: 1;
+                        width: 0;
+                        clear: both;
+                        .module-title-main-l-img{
+                            width: 24px;
+                            margin-right: 11px;
+                            float: left;
+                            i{
+                                font-size: 24px;
+                                color: #FFFFFF;
+                                display: block;
+                                line-height: 1;
+                            }
+                        }
+                        .module-title-main-l-name{
+                            font-weight: 400;
+                            font-size: 18px;
+                            color: #FFFFFF;
+                            line-height: 24px;
+                            text-align: left;
+                            font-style: normal;
+                            text-transform: none;
+                            float: left;
+                        }
+                    }
+                    .module-title-main-r{
+                        flex-shrink:0;
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        line-height: 24px;
+                        text-align: left;
+                        font-style: normal;
+                        text-transform: none;
+                        a{
+                            color: rgba(255, 255, 255, .58);
+                            text-decoration: none;
+                            p{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .main-center-l{
+                flex: 1;
+                width: 0;
+                .center-l-main{
+                    width: 100%;
+                    height: 100%;
+                    overflow-y: auto;
+                    scrollbar-width: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .module-content{
+                        height: 100%;
+                        .works{
+                            width: 100%;
+                            height: auto;
+                            .grid-demo{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                clear: both;
+                                .works-item{
+                                    width: 222px;
+                                    height: 100%;
+                                    min-height: 245px;
+                                    cursor: pointer;
+                                    margin-right: calc(calc(100% - 666px) / 2);
+                                    box-shadow: 6px 9px 8px 8px rgba(0,0,0,0.32);
+                                    backface-visibility: hidden;
+                                    transform: translate3d(0, 0, 0);
+                                    border-radius: 24px;
+                                    overflow: hidden;
+                                    transition: all 3s;
+                                    :hover{
+                                        .works-bg {
+                                            img {
+                                                transform: scale(1.1);
+                                            }
+                                        }
+                                    }
+                                    .works-item-main{
+                                        width: 222px;
+                                        height: 245px;
+                                        position: relative;
+                                        
+                                        .works-bg{
+                                            width: 100%;
+                                            height: 100%;
+                                            img{
+                                                width: 100%;
+                                                height: 100%;
+                                                display: block;
+                                                border-radius: 24px;
+                                                transition: all 1s;
+                                            }
+                                        }
+                                        .works-type{
+                                            width: 34px;
+                                            position: absolute;
+                                            top: 16px;
+                                            right: 17px;
+                                            i{
+                                                font-size: 34px;
+                                                color: #FFFFFF;
+                                                display: block;
+                                            }
+                                        }
+                                        .works-content{
+                                            width: 100%;
+                                            position: absolute;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: -1px;
+                                            backdrop-filter: blur(40px);
+                                            background: rgba(0, 0, 0, 0.3);
+                                            border-radius: 12px 12px 24px 24px;
+                                            .works-content-main{
+                                                padding: 14px 16px 18px 16px;
+                                                .works-content-main-t{
+                                                    width: 100%;
+                                                    margin-bottom: 18px;
+                                                    .works-content-main-t-main{
+                                                        width: 100%;
+                                                        display: flex;
+                                                        .works-name{
+                                                            flex: 1;
+                                                            width: 0;
+                                                            font-weight: 400;
+                                                            font-size: 16px;
+                                                            color: rgba(255, 255, 255, 0.8);
+                                                            line-height: 24px;
+                                                            text-align: left;
+                                                            font-style: normal;
+                                                            text-transform: none;
+                                                            overflow: hidden;
+                                                            white-space: nowrap;
+                                                            text-overflow: ellipsis;
+                                                        }
+                                                        .works-more{
+                                                            width: 24px;
+                                                            flex-shrink:0;
+                                                            margin-left: 20px;
+                                                            i{
+                                                                font-size: 24px;
+                                                                color: rgba(255, 255, 255, 0.8);
+                                                                display: block;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .works-content-main-b{
+                                                    width: 100%;
+                                                    .works-content-main-b-main{
+                                                        width: 100%;
+                                                        clear: both;
+                                                        display: inline-block;
+                                                        .itme-area{
+                                                            width: 50%;
+                                                            float: left;
+                                                            .itme-area-title{
+                                                                margin-bottom: 7px;
+                                                                color: rgba(255, 255, 255, 0.58);
+                                                                font-weight: 400;
+                                                                font-size: 12px;
+                                                                line-height: 1;
+                                                                text-align: left;
+                                                                font-style: normal;
+                                                                text-transform: none;
+                                                            }
+                                                            p{
+                                                                width: 100%;
+                                                                span{
+                                                                    width: 100%;
+                                                                    font-weight: 400;
+                                                                    font-size: 14px;
+                                                                    color: rgba(255, 255, 255, 0.8);
+                                                                    line-height: 1;
+                                                                    text-align: left;
+                                                                    :deep(.el-statistic){
+                                                                        font-size: 14px;
+                                                                        .el-statistic__content{
+                                                                            .el-statistic__number{
+                                                                                font-weight: 400;
+                                                                                font-size: 14px;
+                                                                                color: rgba(255, 255, 255, 0.8);
+                                                                                line-height: 1;
+                                                                                text-align: left;
+                                                                                font-style: normal;
+                                                                                text-transform: none;
+                                                                            }
+                                                                            .el-statistic__suffix{
+                                                                                color: rgba(255, 255, 255, 0.8);
+                                                                                span{
+                                                                                    font-size: 14px;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            .area-r{
+                                                                span{
+                                                                    text-align: right;
+                                                                }
+                                                            }
+                                                            &:last-child{
+                                                                .itme-area-title{
+                                                                    text-align: right;
+                                                                }
+                                                                p{
+                                                                    text-align: right;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .userActivity{
+                        padding: 0 50px 0 0;
+                        .module-content{
+                            overflow: hidden;
+                            padding: 23px 0 35px 23px;
+                        }
+                    }
+                    .influence{
+                        padding: 0 54px 0 0;
+                        .module-content{
+                            padding-left: 15px;
+                        }
+                        .influence-content{
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            .influence-content-l{
+                                width: 24px;
+                                height: 100%;
+                                flex: 0 0 auto;
+                                i{
+                                    font-size: 24px;
+                                    color: #FFFFFF;
+                                    line-height: 1;
+                                    display: block;
+                                    margin-top: 73px;
+                                }
+                            }
+                            .influence-content-c{
+                                flex: 1;
+                                height: auto;
+                                overflow: hidden;
+                                margin: 26px 0 30px 0;
+                                .scroll-containers{
+                                    width: 100%;
+                                    height: auto;
+                                    .influence-content-c-main{
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        flex-wrap: nowrap;
+                                        overflow-x: auto;
+                                        scrollbar-width: none;
+                                        -ms-overflow-style: none;
+                                        white-space: nowrap;
+                                        scroll-behavior: smooth;
+                                        transition: all 3s;
+                                        &::-webkit-scrollbar {
+                                            display: none;
+                                        }
+                                        .cn-item{
+                                            width: 108px;
+                                            height: 100%;
+                                            margin: 0 15px;
+                                            justify-content: center;
+                                            .cn-item-main{
+                                                width: 100%;
+                                                .cn-item-main-avatar{
+                                                    width: 108px;
+                                                    height: 108px;
+                                                    position: relative;
+                                                    .cn-item-pic{
+                                                        width: 108px;
+                                                        height: 108px;
+                                                        border-radius: 50%;
+                                                        box-shadow: 8px 8px 15px 8px rgba(0,0,0,0.32);
+                                                        img{
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            display: block;
+                                                            border-radius: 50%;
+                                                        }
+                                                    }
+                                                    .cn-item-type{
+                                                        padding: 3px 8px;
+                                                        border-radius: 6px;
+
+                                                        font-weight: 500;
+                                                        font-size: 14px;
+                                                        line-height: 1;
+                                                        text-align: left;
+                                                        font-style: normal;
+                                                        text-transform: none;
+
+                                                        color: rgba(255, 255, 255, 0.8);
+                                                        background: rgba(0, 0, 0, 0.6);
+                                                        backdrop-filter: blur(100px);
+                                                        position: absolute;
+                                                        top: 100px;
+                                                        left: 50%;
+                                                        transform: translateX(-50%);
+                                                    }
+                                                }
+                                                .cn-item-name{
+                                                    width: 100%;
+                                                    height: 18px;
+
+                                                    font-weight: 600;
+                                                    font-size: 16px;
+                                                    color: #FFFFFF;
+                                                    line-height: 1;
+                                                    text-align: center;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                    margin-top: 21px;
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                }
+                                            }
+                                            &:last-child {
+                                                margin-right: 0;
+                                            }
+                                        }
+
+                                    }
+                                }
+                                
+                            }
+                            .influence-content-r{
+                                width: 24px;
+                                height: 100%;
+                                flex: 0 0 auto;
+                                i{
+                                    font-size: 24px;
+                                    color: #FFFFFF;
+                                    line-height: 1;
+                                    display: block;
+                                    margin-top: 73px;
+                                }
+                            }
+                        }
+                    }
+                    .historicalAttention{
+                        padding: 0 54px 0 0;
+                        .follow{
+                            width: 100%;
+                            height: auto;
+                            .follow-demo{
+                                width: 100%;
+                                height: auto;
+                                padding: 23px 0 40px 0;
+                                columns: 4;
+                                .foliow-li{
+                                    width: 168px;
+                                    break-inside: avoid;
+                                    box-sizing: border-box;
+                                    background: rgba(255,255,255,0.24);
+                                    box-shadow: 0px 14px 28px 0px rgba(0,0,0,0.14);
+                                    backdrop-filter: blur(60px);
+                                    border-radius: 18px;
+                                    margin-bottom: 20px;
+                                    border: 1px solid rgba(255, 255, 255, .38);
+                                    .follow-dome-item{
+                                        width: 100%;
+                                        height: auto;
+                                        .follow-dome-item-main{
+                                            padding: 25px 12px 25px 12px;
+                                            .follow-item-main-content{
+                                                width: 100%;
+                                                height: auto;
+                                                .follow-item-avatar {
+                                                    width: 54px;
+                                                    height: 54px;
+                                                    margin: 0 auto 20px auto;
+                                                    img {
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        display: block;
+                                                        border-radius: 12px;
+                                                        box-shadow: 0 0 10px rgba(255, 255, 255, .7);
+                                                    }
+                                                }
+                                                .follow-item-name{
+                                                    width: 100%;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    color: #FFFFFF;
+                                                    line-height: 26px;
+                                                    text-align: center;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                    display: -webkit-box; /* 使用Webkit内核的浏览器 */
+                                                    -webkit-line-clamp: 2;
+                                                    -webkit-box-orient: vertical;
+                                                    overflow: hidden;
+                                                }
+                                                .follow-item-title{
+                                                    height: 32px;
+                                                    color: rgba(255,255,255,0.6);
+                                                    font-weight: 400;
+                                                    font-size: 12px;
+                                                    line-height: 1.3;
+                                                    text-align: center;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                    margin-top: 5px;
+                                                    display: -webkit-box; /* 使用Webkit内核的浏览器 */
+                                                    -webkit-line-clamp: 2;
+                                                    -webkit-box-orient: vertical;
+                                                    overflow: hidden;
+                                                }
+                                                .follow-item-video{
+                                                    width: 100%;
+                                                    height: 78px;
+                                                    position: relative;
+                                                    margin-top: 20px;
+                                                    .follow-item-pic{
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        img{
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            display: block;
+                                                            border-radius: 12px;
+                                                            box-shadow: 0 0 10px rgba(255, 255, 255, .7);
+                                                        }
+                                                    }
+                                                    .follow-item-play{
+                                                        width: 24px;
+                                                        height: 24px;
+                                                        position: absolute;
+                                                        top: 50%;
+                                                        left: 50%;
+                                                        transform: translate(-50%,-50%);
+                                                        i{
+                                                            font-size: 24px;
+                                                            color: #FFFFFF;
+                                                            display: block;
+                                                            text-align: center;
+                                                            line-height: 27px;
+                                                        }
+                                                    }
+                                                }
+                                                .follow-item-picture{
+                                                    width: 100%;
+                                                    border-radius: 12px;
+                                                    margin-top: 20px;
+                                                    .follow-item-picture-pic{
+                                                        width: 100%;
+                                                        height: 88px;
+                                                        img{
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            display: block; 
+                                                            border-radius: 12px;
+                                                            box-shadow: 0 0 10px rgba(255, 255, 255, .7);
+                                                        }
+                                                    }
+                                                }
+                                                .follow-item-audio{
+                                                    width: 100%;
+                                                    margin-top: 20px;
+                                                    .follow-item-audio-but{
+                                                        width: 28px;
+                                                        height: 28px;
+                                                        display: block;
+                                                        margin: 0 auto;
+                                                        background: rgba(255,255,255,0.08);
+                                                        backdrop-filter: blur(60px);
+                                                        box-shadow: 0px 8px 28px 0px rgba(0,0,0,0.28);
+                                                        border-radius: 6px;
+                                                        i{
+                                                            font-size: 15px;
+                                                            color: #FFFFFF;
+                                                            display: block;
+                                                            text-align: center;
+                                                            line-height: 28px;
+                                                        }
+                                                    }
+                                                }
+                                                .follow-item-content{
+                                                    width: 100%;
+                                                    height: 124px;
+                                                    font-weight: 400;
+                                                    font-size: 14px;
+                                                    color: rgba(255,255,255,0.6);
+                                                    line-height: 24px;
+                                                    overflow: hidden;
+                                                    text-align: left;
+                                                    margin-top: 15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            .main-center-r{
+                width: 300px;
+                flex-shrink:0;
+                height: calc(100% - 65px);
+                border: 1px solid rgba(255, 255, 255, .38);
+                background: rgba(255, 255, 255, .16);
+                backdrop-filter: blur(52px);
+                border-radius: 18px;
+                overflow: hidden;
+                .cenrer-r-block{
+                    width: calc(100% - 52px);
+                    height: calc(100% - 64px);
+                    padding: 29px 32px 29px 20px;
+                    .module-title{
+                        margin-top: 0;
+                        padding-left: 0;
+                    }
+                    .ability{
+                        width: 100%;
+                        height: auto;
+                        .ability-circle{
+                            width: 100%;
+                            height: 326px;
+                            max-height: 346px;
+                            .ability-circle-main{
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                }
+                                .ability-date{
+                                    height: auto;
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    p{
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        color: #FFFFFF;
+                                        line-height: 1.2;
+                                        text-align: center;
+                                        font-style: normal;
+                                        text-transform: none;
+                                        white-space: nowrap;
+                                    }
+                                    span{
+                                        text-align: center;
+                                        font-weight: 400;
+                                        font-size: 12px;
+                                        color: #FFFFFF;
+                                        line-height: 1.2;
+                                        display: block;
+                                        overflow-wrap: break-word;
+                                        word-wrap: break-word;
+                                        word-break: normal;
+                                    }
+                                }
+                                .ability-name{
+                                    width: 90px;
+                                    height: 90px;
+                                    background-color: rgba(255, 255, 255, 0.15);
+                                    border-radius: 50%;
+                                    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    z-index: 10;
+                                    transform: translate(-50%,-50%);
+                                    span{
+                                        width: 80px;
+                                        font-size: 14px;
+                                        color: #FFFFFF;
+                                        line-height: 1.2;
+                                        text-align: center;
+                                        font-style: normal;
+                                        text-transform: none;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%,-50%);
+                                    }
+                                }
+                                .ability-one,
+                                .ability-two,
+                                .ability-three,
+                                .ability-four,
+                                .ability-five,
+                                .ability-six {
+                                    position: absolute;
+                                    border-radius: 50%;
+                                    background-color: rgba(50, 50, 50, 0.4);
+                                    backdrop-filter: blur(2px);
+                                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    z-index: 5;
+                                    animation: none;
+                                    
+                                    img {
+                                        width: 24px;
+                                        height: 24px;
+                                        object-fit: contain;
+                                        display: block;
+                                        position: absolute;
+                                        top: 32%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                    
+                                    .ability-date {
+                                        margin-top: 5px;
+                                        width: 100%;
+                                        text-align: center;
+                                        
+                                        p {
+                                            font-size: 10px;
+                                            margin-bottom: 2px;
+                                        }
+                                        
+                                        span {
+                                            font-size: 9px;
+                                        }
+                                    }
+                                }
+                                .ability-one {
+                                    width: 50px;
+                                    height: 50px;
+                                    top: 30px;
+                                    right: 40px;
+                                }
+                                .ability-two{
+                                    width: 50px;
+                                    height: 50px;
+                                    top: 60px;
+                                    left: 40px;
+                                }
+                                .ability-three{
+                                    width: 50px;
+                                    height: 50px;
+                                    bottom: 60px;
+                                    right: 40px;
+                                }
+                                .ability-four{
+                                    width: 50px;
+                                    height: 50px;
+                                    top: 30px;
+                                    left: 120px;
+                                }
+                                .ability-five{
+                                    width: 50px;
+                                    height: 50px;
+                                    top: 170px;
+                                    right: 120px;
+                                }
+                                .ability-six{
+                                    width: 50px;
+                                    height: 50px;
+                                    bottom: 30px;
+                                    left: 80px;
+                                }
+                                .ability-one, .ability-four {
+                                    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+                                }
+                                
+                                .ability-two, .ability-five {
+                                    box-shadow: 0 0 8px rgba(100, 200, 255, 0.2);
+                                }
+                                
+                                .ability-three, .ability-six {
+                                    box-shadow: 0 0 8px rgba(255, 200, 100, 0.2);
+                                }
+                                @keyframes subtlePulse {
+                                    0% {
+                                        box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+                                    }
+                                    50% {
+                                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                                    }
+                                    100% {
+                                        box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+                                    }
+                                }
+                                .ability-one {
+                                    animation: subtlePulse 3s infinite ease-in-out;
+                                }
+                                
+                                .ability-two {
+                                    animation: subtlePulse 4s infinite ease-in-out;
+                                }
+                                
+                                .ability-three {
+                                    animation: subtlePulse 5s infinite ease-in-out;
+                                }
+                                
+                                .ability-four {
+                                    animation: subtlePulse 4.5s infinite ease-in-out;
+                                }
+                                
+                                .ability-five {
+                                    animation: subtlePulse 3.5s infinite ease-in-out;
+                                }
+                                
+                                .ability-six {
+                                    animation: subtlePulse 5.5s infinite ease-in-out;
+                                }
+                                @keyframes zoomEffect {
+                                    0% {
+                                        transform: scale(1);
+                                    }
+                                    50% {
+                                        transform: scale(1.01);
+                                    }
+                                    100% {
+                                        transform: scale(1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .records{
+                        width: 100%;
+                        height: calc(100% - 350px);
+                        .module-title{
+                            width: 100%;
+                            padding: 28px 0 15px 0;
+                            .module-title-main-r{
+                                cursor: pointer;
+                                color: rgba(255, 255, 255, .58);
+                            }
+                        }
+                        .module-content{
+                            width: 100%;
+                            height: calc(100% - 67px);
+                        }
+                        .records-main{
+                            width: 100%;
+                            height: 100%;
+                            .records-main-data{
+                                width: 100%;
+                                height: 100%;
+                                .data-conter{
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow-y: auto;
+                                    scrollbar-width: none;
+                                    -ms-overflow-style: none;
+                                    white-space: nowrap;
+                                    scroll-behavior: smooth;
+                                    position: relative;
+                                    &::-webkit-scrollbar {
+                                        display: none;
+                                    }
+                                    .fade-enter-active, .fade-leave-active {
+                                        // transition: opacity 1s ease, transform 1s ease;
+                                        transition: all 3s ease;
+                                    }
+                                    .fade-leave-active {
+                                        position: absolute;
+                                        width: 100%;
+                                    }
+
+                                    .fade-leave-to {
+                                        opacity: 0.1;
+                                        transform: translateY(-100%);
+                                    }
+
+                                    .fade-enter-from {
+                                        opacity: 0;
+                                        transform: translateY(100%);
+                                    }
+
+                                    .fade-enter-to {
+                                        opacity: 1;
+                                        transform: translateY(0);
+                                    }
+                                    .data-conter-item{
+                                        width: 100%;
+                                        height: auto;
+                                        cursor: pointer;
+                                        padding: 15px 0 13px 0;
+                                        border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+                                        transition: opacity 1s ease-out, transform 1s ease-in-out;
+                                        &:nth-child(4){
+                                           border-bottom: none;
+                                           padding-bottom: 0;
+                                        }
+                                        .item-conter{
+                                            width: 100%;
+                                            height: 100%;
+                                            display: flex;
+                                            .item-conter-pic{
+                                                width: 80px;
+                                                height: 60px;
+                                                flex-shrink:0;
+                                                margin-right: 10px;
+                                                flex: 0 0 auto;
+                                                img{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    display: block;
+                                                    border-radius: 8px;
+                                                }
+                                            }
+                                            .item-conter-font{
+                                                flex: 1;
+                                                width: 0;
+                                                overflow: hidden;
+                                                .item-conter-font-name{
+                                                    font-weight: 600;
+                                                    font-size: 16px;
+                                                    color: #FFFFFF;
+                                                    line-height: 1;
+                                                    text-align: left;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                    text-overflow: ellipsis;
+                                                    margin: 4px 0 15px 0;
+                                                }
+                                                .item-conter-font-title{
+                                                    font-weight: 400;
+                                                    font-size: 14px;
+                                                    color: #FFFFFF;
+                                                    line-height: 1;
+                                                    text-align: left;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                    text-overflow: ellipsis;
+                                                }
+                                            }
+                                            .item-conter-support{
+                                                width: 30px;
+                                                height: 100%;
+                                                flex: 0 0 auto;
+                                                margin-left: 10px;
+                                                .item-conter-support-img{
+                                                    width: 24px;
+                                                    height: auto;
+                                                    i{
+                                                        font-size: 24px;
+                                                        color: #FFFFFF;
+                                                        line-height: 60px;
+                                                        display: inline-block;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

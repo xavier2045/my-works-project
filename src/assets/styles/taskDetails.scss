@@ -1,0 +1,1707 @@
+.taskDetails {
+    width: 100%;
+    height: 100%;
+    .taskDetails-container {
+        height: calc(100% - 90px);
+        overflow-y: auto;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .taskDetails-container-body{
+            width: calc(100% - 90px);
+            height: 320px;
+            padding: 34px 30px 26px 38px;
+            border-radius: 28px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            background-color: rgb(0, 0, 0, .05);
+            backdrop-filter: blur(24px);
+            box-shadow: 18px 18px 28px 18px rgb(0, 0, 0, .05);
+            border: 1px solid rgb(255, 255, 255, .38);
+            .body-main{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                .body-main-info{
+                    flex: 1;
+                    width: 0;
+                    .body-main-info-content{
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        .info-content-cover{
+                            width: 243px;
+                            height: auto;
+                            .info-content-cover-img{
+                                width: 243px;
+                                height: 283px;
+                                border-radius: 20px;
+                                overflow: hidden;
+                                box-shadow: 6px 0px 14px 0px rgb(0, 0, 0, .15);
+                            }
+                            .info-content-cover-text{
+                                width: 100%;
+                                height: auto;
+                                font-weight: 400;
+                                font-size: 20px;
+                                color: #FFFFFF;
+                                line-height: 1;
+                                text-align: center;
+                                margin-top: 17px;
+                                span{
+                                    display: inline-block;
+                                    :deep(.el-statistic){
+                                        font-size: 14px;
+                                        margin-left: 5px;
+                                        display: inline-block;
+                                        .el-statistic__content{
+                                            .el-statistic__number{
+                                                font-weight: 400;
+                                                font-size: 24px;
+                                                color: rgba(255, 255, 255, 1);
+                                                line-height: 1;
+                                                text-align: left;
+                                                font-style: normal;
+                                                text-transform: none;
+                                            }
+                                            .el-statistic__suffix{
+                                                color: rgba(255, 255, 255, 1);
+                                                span{
+                                                    font-size: 24px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .body-main-info-users{
+                            width: 300px;
+                            height: auto;
+                            margin-left: 30px;
+                            .user-id{
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: rgb(255, 255, 255, .7);
+                                line-height: 1;
+                                text-align: left;
+                                margin-top: 10px;
+                            }
+                            .info-users-time{
+                                font-weight: 400;
+                                font-size: 20px;
+                                color: rgb(255, 255, 255, .7);
+                                line-height: 1;
+                                text-align: left;
+                            }
+                            .info-users-initiator{
+                                width: 100%;
+                                height: auto;
+                                margin-top: 14px;
+                                .info-users-initiator-name{
+                                    font-weight: 400;
+                                    font-size: 22px;
+                                    color: #FFFFFF;
+                                    line-height: 1;
+                                    text-align: left;
+                                }
+                            }
+                            .task-categoryName{
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: #FFFFFF;
+                                line-height: 1;
+                                text-align: left;
+                                margin-top: 20px;
+                            }
+                            .info-users-list{
+                                width: 100%;
+                                height: auto;
+                                margin-top: 20px;
+                                .list-info{
+                                    width: 100%;
+                                    height: auto;
+                                    .list-info-name{
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        .list-info-name-text{
+                                            font-weight: 400;
+                                            font-size: 18px;
+                                            color: rgb(255, 255, 255, .7);
+                                            line-height: 70px;
+                                            text-align: left;
+                                            white-space: nowrap;
+                                        }
+                                        .list-info-name-img{
+                                            width: 63px;
+                                            height: 63px;
+                                            background: url(@/assets/images/task/avatar_bg.png) no-repeat center center;
+                                            background-size: 100% 100%;
+                                            :deep(.el-image) {
+                                                width: 40px;
+                                                height: 40px;
+                                                border-radius: 50%;
+                                                display: block;
+                                                margin: 12px auto;
+                                            }
+                                        }
+                                        .list-info-name-img-list{
+                                            overflow: hidden;
+                                            clear: both;
+                                            display: table;
+                                            .list-info-name-img-list-item{
+                                                width: 73px;
+                                                height: 73px;
+                                                float: left;
+                                                border-radius: 50%;
+                                                margin-left: -10px;
+                                                overflow: hidden;
+                                                background: url(@/assets/images/task/avatar_bg.png) no-repeat center center;
+                                                background-size: 100% 100%;
+                                                &:first-child{
+                                                    margin-left: 0;
+                                                }
+                                                :deep(.el-image) {
+                                                    width: 46px;
+                                                    height: 46px;
+                                                    display: block;
+                                                    border-radius: 50%;
+                                                    margin: 13px auto;
+                                                }
+                                                img{
+                                                    width: 46px;
+                                                    height: 46px;
+                                                    display: block;
+                                                }
+                                                p{
+                                                    width: 100%;
+                                                    font-weight: 600;
+                                                    font-size: 14px;
+                                                    color: #FFFFFF;
+                                                    line-height: 73px;
+                                                    text-align: center;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .toBePaid{
+                                    width: 16px;
+                                    height: auto;
+                                    .toBePaid-amount{
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        .toBePaid-amount-icon{
+                                            width: 24px;
+                                            flex-shrink: 0;
+                                            margin-right: 10px;
+                                            i{
+                                                font-size: 24px;
+                                                color: #FFFFFF;
+                                                line-height: 1;
+                                            }
+                                        }
+                                        .toBePaid-amount-text{
+                                            flex: 1;
+                                            width: 0;
+                                            font-weight: 400;
+                                            font-size: 18px;
+                                            color: #FFFFFF;
+                                            line-height: 1;
+                                            text-align: left;
+                                            span{
+                                                font-size: 20px;
+                                                line-height: 1;
+                                            }
+                                        }
+                                    }
+                                    .toBePaid-time{
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        span{
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            color: rgb(255, 255, 255, .7);
+                                            line-height: 56px;
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .body-main-info-datas{
+                            flex: 1;
+                            width: 0;
+                            height: 100%;
+                            .datas-item{
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                margin-top: 15px;
+                                justify-content: flex-start;
+                                .datas-item-icon{
+                                    width: 57px;
+                                    height: 58px;
+                                    flex-shrink: 0;
+                                    background: url(@/assets/images/task/icon_bg.png) no-repeat center center;
+                                    background-size: 100% 100%;
+                                    i{
+                                        font-size: 24px;
+                                        line-height: 1;
+                                        display: block;
+                                        padding: 14px 0 0 14px;
+                                        color: rgb(255, 255, 255, .7);
+                                    }
+                                }
+                                .datas-item-progress{
+                                    flex: 1;
+                                    width: 0;
+                                    position: relative;
+                                    .progress-text{
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        color: rgb(255, 255, 255, .7);
+                                        line-height: 1;
+                                        text-align: left;
+                                        display: inline-block;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                    .progress-bar{
+                                        width: 100%;
+                                        margin-top: 10px;
+                                        .progress-bar-display{
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            .link-l{
+                                                flex-grow: 1;
+                                                height: 1px;
+                                                margin-top: 12px;
+                                                position: relative;
+                                                background-color: rgb(255, 255, 255, .38);
+                                                &::before{
+                                                    content: '';  // 必须设置 content 属性
+                                                    display: inline-block;
+                                                    width: 7px;
+                                                    height: 7px;
+                                                    border-radius: 50%;
+                                                    background-color: rgba(255, 255, 255, 1);
+                                                    vertical-align: middle;
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    transform: translateY(-50%);
+                                                    left: 0;
+                                                    z-index: 2;
+                                                }
+                                            }
+                                            .link-c{
+                                                width: 60px;
+                                                height: 24px;
+                                                font-weight: 400;
+                                                font-size: 16px;
+                                                color: #FFFFFF;
+                                                line-height: 26px;
+                                                text-align: center;
+                                                border-radius: 4px;
+                                                border: 1px solid rgb(255, 255, 255, .38);
+                                            }
+                                            .link-r{
+                                                flex-grow: 1;
+                                                height: 1px;
+                                                margin-top: 12px;
+                                                position: relative;
+                                                background-color: rgb(255, 255, 255, .38);
+                                                &::before{
+                                                    content: '';  // 必须设置 content 属性
+                                                    display: inline-block;
+                                                    width: 7px;
+                                                    height: 7px;
+                                                    border-radius: 50%;
+                                                    background-color: rgba(255, 255, 255, 1);
+                                                    vertical-align: middle;
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    transform: translateY(-50%);
+                                                    right: 0;
+                                                    z-index: 2;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .progress-name{
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        color: rgb(255, 255, 255, .7);
+                                        line-height: 1;
+                                        text-align: right;
+                                        margin-top: 6px;
+                                    }
+                                }
+                                .datas-item-two{
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .datas-item-two-li{
+                                        width: 50%;
+                                        height: auto;
+                                        .datas-item-two-li-m{
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            .li-m-icon{
+                                                width: 57px;
+                                                height: auto;
+                                                flex-shrink: 0;
+                                            }
+                                            .li-m-text{
+                                                flex: 1;
+                                                width: 0;
+                                                .li-m-text-name{
+                                                    width: 100%;
+                                                    font-weight: 400;
+                                                    font-size: 14px;
+                                                    color: rgb(255, 255, 255, .7);
+                                                    line-height: 1;
+                                                    text-align: left;
+                                                    margin-top: 10px;
+                                                }
+                                                .li-m-text-data{
+                                                    width: 100%;
+                                                    font-weight: 400;
+                                                    font-size: 14px;
+                                                    color: rgb(255, 255, 255, 1);
+                                                    line-height: 1;
+                                                    text-align: left;
+                                                    margin-top: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .body-main-operation{
+                    width: 200px;
+                    flex-shrink: 0;
+                    .operation-item{
+                        width: 168px;
+                        margin: 0 auto;
+                        .text-tips{
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            line-height: 26px;
+                            text-align: center;
+                            margin-top: 25px;
+                        }
+                        .but-oper{
+                            width: 168px;
+                            height: 83px;
+                            cursor: pointer;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            line-height: 83px;
+                            text-align: center;
+                            background: url(@/assets/images/task/but_bg.png) no-repeat center center;
+                            background-size: 100% 100%;
+                            &:hover{
+                                background: url(@/assets/images/task/but_bg_hover.png) no-repeat center center;
+                                background-size: 100% 100%;
+                            }
+                        }
+                        .open-task{
+                            width: 100%;
+                            height: auto;
+                            .text-tips{
+                                margin-bottom: 10px;
+                            }
+                            p{
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: #FFFFFF;
+                                line-height: 1;
+                                text-align: center;
+                                margin: 5px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .taskDetails-container-info{
+            width: 100%;
+            height: auto;
+            .taskDetails-container-info-content{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                .cintainer-info-main-l{
+                    width: 375px;
+                    flex-shrink: 0;
+                    display: inline-block;
+                    margin-right: 20px;
+                    .cintainer-info-main-l-main{
+                        width: 375px;
+                        height: 600px;
+                        border-radius: 24px;
+                        position: relative;
+                        overflow: hidden;
+                        .taskDetails-cover{
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            z-index: 2;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                object-fit: cover;
+                            }
+                        }
+                        .taskDetails-describe{
+                            height: auto;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            z-index: 3;
+                            padding: 31px 25px 23px 25px;
+                            background-color: rgb(0, 0, 0, .5);
+                            backdrop-filter: blur(24px);
+                            border-radius: 0 0 24px 24px;
+                            display: flex;
+                            flex-direction: column;
+                            .taskDetails-describe-main{
+                                width: 100%;
+                                height: 100%;
+                                .taskDetails-describe-main-name{
+                                    width: 100%;
+                                    font-size: 18px;
+                                    color: #FFFFFF;
+                                    line-height: 28px;
+                                    text-align: left;
+                                    font-style: normal;
+                                    text-transform: none;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    margin-bottom: 23px;
+                                }
+                                .taskDetails-describe-main-num{
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .taskDetails-nft{
+                                        width: 24px;
+                                        height: auto;
+                                        i{
+                                            font-size: 24px;
+                                            color: #FFFFFF;
+                                            line-height: 24px;
+                                            display: block;
+                                        }
+                                    }
+                                    .taskDetails-giveALike{
+                                        display: inline-block;
+                                        .taskDetails-giveALike-main{
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            justify-content: center;
+                                            .taskDetails-giveALike-main-icon{
+                                                width: 24px;
+                                                height: auto;
+                                                flex-shrink: 0;
+                                                margin-right: 7px;
+                                                cursor: pointer;
+                                                .active{
+                                                    color: rgb(255, 255, 255, .7);
+                                                }
+                                                i{
+                                                    font-size: 24px;
+                                                    color: rgb(255, 255, 255, .7);
+                                                    line-height: 24px;
+                                                    display: block;
+                                                }
+                                            }
+                                            .taskDetails-giveALike-main-num{
+                                                font-size: 14px;
+                                                color: #FFFFFF;
+                                                line-height: 24px;
+                                                text-align: left;
+                                                font-style: normal;
+                                                text-transform: none;
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .cintainer-info-main-r{
+                    flex: 1;
+                    width: 0;
+                    .cintainer-info-main-r-main{
+                        width: 100%;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        .task-info-l{
+                            width: 348px;
+                            height: auto;
+                            margin-right: 30px;
+                            .task-info-l-top{
+                                width: 100%;
+                                height: auto;
+                                margin-bottom: 27px;
+                                .task-info-l-top-bg{
+                                    width: 348px;
+                                    height: 244px;
+                                    mask-image: url(@/assets/images/common/l-t-bg.png);
+                                    -webkit-mask-image: url(@/assets/images/common/l-t-bg.png);
+                                    mask-repeat: no-repeat;
+                                    -webkit-mask-repeat: no-repeat;
+                                    mask-size: 100% 100%;
+                                    background-color: rgb(255, 255, 255, .08);
+                                    backdrop-filter: blur(24px);
+                                    position: relative;
+                                    background-image: url(@/assets/images/common/l-t-bg-guang.png);
+                                    background-size: 100% 100%;
+                                    .task-info-l-top-main{
+                                        width: 346px;
+                                        height: 242px;
+                                        padding: 1;
+                                        mask-image: url(@/assets/images/common/l-t-bg.png);
+                                        -webkit-mask-image: url(@/assets/images/common/l-t-bg.png);
+                                        mask-repeat: no-repeat;
+                                        -webkit-mask-repeat: no-repeat;
+                                        mask-size: 100% 100%;
+                                        background-color: rgb(0, 0, 0, .12);
+                                        backdrop-filter: blur(24px);
+                                        position: absolute;
+                                        top: 1px;
+                                        left: 1px;
+                                        .main-item{
+                                            padding: 30px 40px 35px 45px;
+                                            .item-desc{
+                                                width: 100%;
+                                                margin-bottom: 30px;
+                                                .item-desc-main{
+                                                    width: 100%;
+                                                    margin-bottom: 16px;
+                                                    .item-desc-main-title{
+                                                        width: 100%;
+                                                        display: flex;
+                                                        .item-desc-main-title-icon{
+                                                            width: 24px;
+                                                            height: auto;
+                                                            flex-shrink: 0;
+                                                            margin-right: 7px;
+                                                            i{
+                                                                font-size: 24px;
+                                                                color: #FFFFFF;
+                                                                line-height: 24px;
+                                                                display: block;
+                                                                text-align: center;
+                                                            }
+                                                        }
+                                                        .item-desc-main-title-text{
+                                                            flex: 1;
+                                                            font-weight: 500;
+                                                            font-size: 18px;
+                                                            color: #FFFFFF;
+                                                            line-height: 24px;
+                                                            text-align: left;
+                                                            font-style: normal;
+                                                            text-transform: none;
+                                                        }
+                                                    }
+                                                }
+                                                .item-desc-text{
+                                                    width: 100%;
+                                                    height: 128px;
+                                                    font-size: 14px;
+                                                    color: #FFFFFF;
+                                                    line-height: 1.5;
+                                                    text-align: left;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .task-info-l-bot{
+                                width: 100%;
+                                .task-info-l-bot-bg{
+                                    width: 348px;
+                                    height: 327px;
+                                    mask-image: url(@/assets/images/common/l-b-bg.png);
+                                    -webkit-mask-image: url(@/assets/images/common/l-b-bg.png);
+                                    mask-repeat: no-repeat;
+                                    -webkit-mask-repeat: no-repeat;
+                                    mask-size: 100% 100%;
+                                    background-color: rgb(255, 255, 255, .08);
+                                    backdrop-filter: blur(24px);
+                                    position: relative;
+                                    background-image: url(@/assets/images/common/l-b-bg-guang.png);
+                                    background-size: 100% 100%;
+                                    .task-info-l-bot-main{
+                                        width: 346px;
+                                        height: 325px;
+                                        padding: 1;
+                                        mask-image: url(@/assets/images/common/l-b-bg.png);
+                                        -webkit-mask-image: url(@/assets/images/common/l-b-bg.png);
+                                        mask-repeat: no-repeat;
+                                        -webkit-mask-repeat: no-repeat;
+                                        mask-size: 100% 100%;
+                                        background-color: rgb(0, 0, 0, .12);
+                                        backdrop-filter: blur(24px);
+                                        position: absolute;
+                                        top: 1px;
+                                        left: 1px;
+                                        .main-item{
+                                            padding: 30px 40px 35px 45px;
+                                            .item-desc{
+                                                width: 100%;
+                                                .item-desc-main{
+                                                    width: 100%;
+                                                    margin-bottom: 16px;
+                                                    .item-desc-main-title{
+                                                        width: 100%;
+                                                        display: flex;
+                                                        .item-desc-main-title-icon{
+                                                            width: 24px;
+                                                            height: auto;
+                                                            flex-shrink: 0;
+                                                            margin-right: 17px;
+                                                            i{
+                                                                font-size: 24px;
+                                                                color: #FFFFFF;
+                                                                line-height: 24px;
+                                                                display: block;
+                                                                text-align: center;
+                                                            }
+                                                        }
+                                                        .item-desc-main-title-text{
+                                                            flex: 1;
+                                                            font-weight: 500;
+                                                            font-size: 18px;
+                                                            color: #FFFFFF;
+                                                            line-height: 24px;
+                                                            text-align: left;
+                                                            font-style: normal;
+                                                            text-transform: none;
+                                                        }
+                                                    }
+                                                }
+                                                .item-desc-text{
+                                                    width: 100%;
+                                                    height: 130px;
+                                                    font-size: 14px;
+                                                    color: #FFFFFF;
+                                                    line-height: 1.5;
+                                                    text-align: left;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                }
+                                            }
+                                            .item-schedule{
+                                                width: 100%;
+                                                display: flex;
+                                                margin-bottom: 30px;
+                                                .item-schedule-icon{
+                                                    width: 48px;
+                                                    height: 48px;
+                                                    flex-shrink: 0;
+                                                    margin-right: 7px;
+                                                    border-radius: 50%;
+                                                    background-color: rgb(0, 0, 0, .35);
+                                                    i{
+                                                        font-size: 24px;
+                                                        color: #FFFFFF;
+                                                        display: block;
+                                                        line-height: 48px;
+                                                        text-align: center;
+                                                    }
+                                                }
+                                                .item-schedule-text{
+                                                    flex: 1;
+                                                    .item-schedule-text-title{
+                                                        font-weight: 500;
+                                                        font-size: 16px;
+                                                        color: #FFFFFF;
+                                                        line-height: 1;
+                                                        text-align: left;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                        margin-bottom: 9px;
+                                                    }
+                                                    .item-schedule-text-num{
+                                                        font-size: 32px;
+                                                        color: #FFFFFF;
+                                                        line-height: 1;
+                                                        text-align: left;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .task-info-reward{
+                            width: 282px;
+                            height: 270px;
+                            position: absolute;
+                            top: calc(50% - 6px);
+                            left: calc(50% + 3px);
+                            transform: translate(-50%, -50%);
+                            .task-info-reward-bg{
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                .task-info-reward-bg-img{
+                                    width: 190px;
+                                    height: 190px;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    top: calc(50% + 5px);
+                                    left: 50%;
+                                    z-index: -1;
+                                    transform: translate(-50%, -50%);
+                                    background-color: rgb(0, 0, 0, .02);
+                                    backdrop-filter: blur(24px);
+                                }
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                }
+                            }
+                            .task-info-reward-main{
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                .task-info-reward-main-item{
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    .item-value{
+                                        width: 100%;
+                                        display: inline-block;
+                                        margin-bottom: 12px;
+                                        text-align: center;
+                                        :deep(.el-statistic){
+                                            font-size: 52px;
+                                            .el-statistic__content{
+                                                .el-statistic__number{
+                                                    font-size: 52px;
+                                                    color: #FFFFFF;
+                                                    line-height: 1;
+                                                    text-align: center;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                }
+                                                .el-statistic__suffix{
+                                                    color: rgba(255, 255, 255, 0.8);
+                                                    span{
+                                                        font-size: 52px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .item-name{
+                                        font-size: 14px;
+                                        color: rgb(255, 255, 255, .7);
+                                        line-height: 1;
+                                        text-align: center;
+                                        font-style: normal;
+                                        text-transform: none;
+                                    }
+                                }
+                            }
+                        }
+                        .task-info-r{
+                            width: 348px;
+                            height: auto;
+                            .task-info-r-top{
+                                width: 100%;
+                                height: auto;
+                                margin-bottom: 27px;
+                                .task-info-r-top-bg{
+                                    width: 348px;
+                                    height: 369px;
+                                    mask-image: url(@/assets/images/common/r-t-bg.png);
+                                    -webkit-mask-image: url(@/assets/images/common/r-t-bg.png);
+                                    mask-repeat: no-repeat;
+                                    -webkit-mask-repeat: no-repeat;
+                                    mask-size: 100% 100%;
+                                    background-color: rgb(255, 255, 255, .08);
+                                    backdrop-filter: blur(24px);
+                                    position: relative;
+                                    background-image: url(@/assets/images/common/r-t-bg-guang.png);
+                                    background-size: 100% 100%;
+                                    .task-info-r-top-main{
+                                        width: 346px;
+                                        height: 367px;
+                                        padding: 1;
+                                        mask-image: url(@/assets/images/common/r-t-bg.png);
+                                        -webkit-mask-image: url(@/assets/images/common/r-t-bg.png);
+                                        mask-repeat: no-repeat;
+                                        -webkit-mask-repeat: no-repeat;
+                                        mask-size: 100% 100%;
+                                        background-color: rgb(0, 0, 0, .12);
+                                        backdrop-filter: blur(24px);
+                                        position: absolute;
+                                        top: 1px;
+                                        left: 1px;
+                                        
+                                        .main-item{
+                                            padding: 30px 40px 35px 45px;
+                                            .item-target{
+                                                width: 100%;
+                                                .item-target-main{
+                                                    width: 100%;
+                                                    margin-bottom: 16px;
+                                                    .item-target-main-title{
+                                                        width: 100%;
+                                                        display: flex;
+                                                        .item-target-main-title-icon{
+                                                            width: 24px;
+                                                            height: auto;
+                                                            flex-shrink: 0;
+                                                            margin-right: 17px;
+                                                            i{
+                                                                font-size: 24px;
+                                                                color: #FFFFFF;
+                                                                line-height: 24px;
+                                                                display: block;
+                                                                text-align: center;
+                                                            }
+                                                        }
+                                                        .item-target-main-title-text{
+                                                            flex: 1;
+                                                            font-weight: 500;
+                                                            font-size: 18px;
+                                                            color: #FFFFFF;
+                                                            line-height: 24px;
+                                                            text-align: left;
+                                                            font-style: normal;
+                                                            text-transform: none;
+                                                        }
+                                                    }
+                                                }
+                                                .item-target-text{
+                                                    width: 100%;
+                                                    height: 80px;
+                                                    font-size: 14px;
+                                                    color: #FFFFFF;
+                                                    line-height: 1.5;
+                                                    text-align: left;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                }
+                                            }
+                                            .item-num{
+                                                width: calc(100% - 97px);
+                                                display: flex;
+                                                margin: 28px 0 0 97px;
+                                                padding-bottom: 28px;
+                                                border-bottom: 1px solid rgb(255, 255, 255, .38);
+                                                .item-num-icon{
+                                                    width: 48px;
+                                                    height: 48px;
+                                                    flex-shrink: 0;
+                                                    margin-right: 7px;
+                                                    border-radius: 50%;
+                                                    background-color: rgb(0, 0, 0, .35);
+                                                    i{
+                                                        font-size: 24px;
+                                                        color: #FFFFFF;
+                                                        display: block;
+                                                        line-height: 48px;
+                                                        text-align: center;
+                                                    }
+                                                }
+                                                .item-num-text{
+                                                    flex: 1;
+                                                    .item-num-text-title{
+                                                        font-weight: 500;
+                                                        font-size: 16px;
+                                                        color: #FFFFFF;
+                                                        line-height: 1;
+                                                        text-align: left;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                        margin-bottom: 9px;
+                                                    }
+                                                    .item-num-text-num{
+                                                        font-size: 32px;
+                                                        color: #FFFFFF;
+                                                        line-height: 1;
+                                                        text-align: left;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                    }
+                                                }
+                                            }
+                                            .item-time{
+                                                width: calc(100% - 97px);
+                                                display: flex;
+                                                padding-left: 97px;
+                                                margin-top: 28px;
+                                                .item-time-icon{
+                                                    width: 48px;
+                                                    height: 48px;
+                                                    flex-shrink: 0;
+                                                    margin-right: 7px;
+                                                    border-radius: 50%;
+                                                    background-color: rgb(0, 0, 0, .35);
+                                                    i{
+                                                        font-size: 24px;
+                                                        color: #FFFFFF;
+                                                        display: block;
+                                                        line-height: 48px;
+                                                        text-align: center;
+                                                    }
+                                                }
+                                                .item-time-text{
+                                                    flex: 1;
+                                                    .item-time-text-title{
+                                                        font-weight: 500;
+                                                        font-size: 16px;
+                                                        color: #FFFFFF;
+                                                        line-height: 1;
+                                                        text-align: left;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                        margin-bottom: 9px;
+                                                    }
+                                                    .item-time-text-num{
+                                                        font-size: 32px;
+                                                        color: #FFFFFF;
+                                                        line-height: 1;
+                                                        text-align: left;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .task-info-r-bot{
+                                width: 100%;
+                                .task-info-r-bot-bg{
+                                    width: 348px;
+                                    height: 202px;
+                                    mask-image: url(@/assets/images/common/r-b-bg.png);
+                                    -webkit-mask-image: url(@/assets/images/common/r-b-bg.png);
+                                    mask-repeat: no-repeat;
+                                    -webkit-mask-repeat: no-repeat;
+                                    mask-size: 100% 100%;
+                                    background-color: rgb(255, 255, 255, .08);
+                                    backdrop-filter: blur(24px);
+                                    position: relative;
+                                    background-image: url(@/assets/images/common/r-b-bg-guang.png);
+                                    background-size: 100% 100%;
+                                    .task-info-r-bot-main{
+                                        width: 346px;
+                                        height: 200px;
+                                        padding: 1;
+                                        mask-image: url(@/assets/images/common/r-b-bg.png);
+                                        -webkit-mask-image: url(@/assets/images/common/r-b-bg.png);
+                                        mask-repeat: no-repeat;
+                                        -webkit-mask-repeat: no-repeat;
+                                        mask-size: 100% 100%;
+                                        background-color: rgb(0, 0, 0, .12);
+                                        backdrop-filter: blur(24px);
+                                        position: absolute;
+                                        top: 1px;
+                                        left: 1px;
+                                        .main-item{
+                                            padding: 36px 62px 23px 62px;
+                                            .main-item-head{
+                                                width: 100%;
+                                                display: flex;
+                                                .participants-icon{
+                                                    width: 24px;
+                                                    height: auto;
+                                                    flex-shrink: 0;
+                                                    margin-right: 17px;
+                                                    i{
+                                                        font-size: 24px;
+                                                        color: #FFFFFF;
+                                                        line-height: 24px;
+                                                        display: block;
+                                                        text-align: center;
+                                                    }
+                                                }
+                                                .participants-title{
+                                                    flex: 1;
+                                                    font-weight: 500;
+                                                    font-size: 18px;
+                                                    color: #FFFFFF;
+                                                    line-height: 24px;
+                                                    text-align: left;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                }
+                                            }
+                                            .participants-main{
+                                                width: 100%;
+                                                height: auto;
+                                                .applyNum-no{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    font-size: 14px;
+                                                    color: rgb(255, 255, 255, .7);
+                                                    line-height: 121px;
+                                                    text-align: center;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                }
+                                                .participants-main-cancelATask{
+                                                    width: 165px;
+                                                    height: 40px;
+                                                    margin: 22px auto 0 auto;
+                                                    border-radius: 19px;
+                                                    background-color: rgb(0, 0, 0, .3);
+                                                    font-size: 16px;
+                                                    color: #FFFFFF;
+                                                    line-height: 38px;
+                                                    text-align: center;
+                                                    font-style: normal;
+                                                    text-transform: none;
+                                                    cursor: pointer;
+                                                    .select-text{
+                                                        display: inline-block;
+                                                        margin-right: 12px;
+                                                    }
+                                                    i{
+                                                        display: inline-block;
+                                                        font-size: 20px;
+                                                        line-height: 40px;
+                                                    }
+                                                }
+                                                .participants-main-apply{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    .participants-main-apply-title{
+                                                        font-size: 18px;
+                                                        color: #FFFFFF;
+                                                        line-height: 1;
+                                                        text-align: center;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                    }
+                                                    .participants-main-apply-list{
+                                                        overflow: hidden;
+                                                        clear: both;
+                                                        display: table;
+                                                        margin: 21px auto 0 auto;
+                                                        .participants-main-apply-list-item{
+                                                            width: 40px;
+                                                            height: 40px;
+                                                            margin-left: -10px;
+                                                            float: left;
+                                                            border-radius: 50%;
+                                                            overflow: hidden;
+                                                            background-color: rgb(162, 148, 137, 1);
+                                                            &:first-child{
+                                                                margin-left: 0;
+                                                            }
+                                                            img{
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                display: block;
+                                                            }
+                                                            p{
+                                                                width: 100%;
+                                                                font-weight: 600;
+                                                                font-size: 14px;
+                                                                color: #FFFFFF;
+                                                                line-height: 40px;
+                                                                text-align: center;
+                                                                font-style: normal;
+                                                                text-transform: none;
+                                                            }
+                                                        }
+                                                    }
+                                                    .participants-main-select{
+                                                        width: 165px;
+                                                        height: 40px;
+                                                        margin: 22px auto 0 auto;
+                                                        border-radius: 19px;
+                                                        background-color: rgb(0, 0, 0, .3);
+                                                        font-size: 16px;
+                                                        color: #FFFFFF;
+                                                        line-height: 38px;
+                                                        text-align: center;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                        cursor: pointer;
+                                                        &:hover{
+                                                            background-color: rgb(0, 0, 0, .5);
+                                                        }
+                                                        .select-text{
+                                                            display: inline-block;
+                                                            margin-right: 12px;
+                                                        }
+                                                        i{
+                                                            display: inline-block;
+                                                            font-size: 20px;
+                                                            line-height: 40px;
+                                                        }
+                                                    }
+                                                    .participants-main-apply-tips{
+                                                        font-size: 16px;
+                                                        color: #FFFFFF;
+                                                        line-height: 28px;
+                                                        text-align: center;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                    }
+                                                }
+                                                .participants-main-personInCharge{
+                                                    width: 100%;
+                                                    height: auto;
+                                                    
+                                                    .participants-main-apply-title{
+                                                        font-size: 18px;
+                                                        color: #FFFFFF;
+                                                        line-height: 1;
+                                                        text-align: center;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                        .pending-main{
+                                                            height: auto;
+                                                            display: inline-block;
+                                                            .pending-main-top{
+                                                                width: 100%;
+                                                                height: auto;
+                                                                display: flex;
+                                                                .pending-main-top-icon{
+                                                                    width: 20px;
+                                                                    height: auto;
+                                                                    flex-shrink: 0;
+                                                                    margin-right: 10px;
+                                                                    i{
+                                                                        font-size: 20px;
+                                                                        line-height: 20px;
+                                                                        color: #FFFFFF;
+                                                                        text-align: center;
+                                                                    }
+                                                                }
+                                                                .pending-main-top-text{
+                                                                    flex: 1;
+                                                                    width: 0;
+                                                                    text-align: left;
+                                                                    white-space: nowrap;
+                                                                }
+                                                            }
+                                                            .pending-main-bottom{
+                                                                width: 100%;
+                                                                height: auto;
+                                                                display: flex;
+                                                                margin-top: 10px;
+                                                                justify-content: flex-start;
+                                                                .pending-main-bottom-time{
+                                                                    margin: 0 5px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .personInCharge-avatar{
+                                                        width: 40px;
+                                                        height: 40px;
+                                                        border-radius: 50%;
+                                                        overflow: hidden;
+                                                        margin: 0 auto;
+                                                        .el-image{
+                                                            width: 100%;
+                                                            height: 100%;
+                                                        }
+                                                        img{
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            display: block;
+                                                        }
+                                                    }
+                                                    .participants-main-apply-list{
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        margin: 21px auto 0 auto;
+                                                        .personInCharge-avatar{
+                                                            width: 40px;
+                                                            height: 40px;
+                                                            border-radius: 50%;
+                                                            overflow: hidden;
+                                                            .el-image{
+                                                                width: 100%;
+                                                                height: 100%;
+                                                            }
+                                                            img{
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                display: block;
+                                                            }
+                                                        }
+                                                        
+                                                    }
+                                                    .member-avatar-main-lsit{
+                                                        overflow: hidden;
+                                                        clear: both;
+                                                        margin-top: 23px;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        .member-avatar-main-lsit-item{
+                                                            width: 44px;
+                                                            height: 44px;
+                                                            margin-left: -10px;
+                                                            float: left;
+                                                            overflow: hidden;
+                                                            border-radius: 50%;
+                                                            background-color: rgb(162, 148, 137, 1);
+                                                            &:first-child{
+                                                                margin-left: 0;
+                                                            }
+                                                            img{
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                display: block;
+                                                            }
+                                                            p{
+                                                                width: 100%;
+                                                                font-weight: 600;
+                                                                font-size: 14px;
+                                                                color: #FFFFFF;
+                                                                line-height: 44px;
+                                                                text-align: center;
+                                                                font-style: normal;
+                                                                text-transform: none;
+                                                            }
+                                                        }
+                                                    }
+                                                    .participants-main-select{
+                                                        width: 165px;
+                                                        height: 40px;
+                                                        margin: 22px auto 0 auto;
+                                                        border-radius: 19px;
+                                                        background-color: rgb(0, 0, 0, .3);
+                                                        font-size: 16px;
+                                                        color: #FFFFFF;
+                                                        line-height: 38px;
+                                                        text-align: center;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                        cursor: pointer;
+                                                        &:hover{
+                                                            background-color: rgb(0, 0, 0, .5);
+                                                        }
+                                                        .select-text{
+                                                            display: inline-block;
+                                                            margin-right: 12px;
+                                                        }
+                                                        i{
+                                                            display: inline-block;
+                                                            font-size: 20px;
+                                                            line-height: 40px;
+                                                        }
+                                                    }
+                                                    .payMarginT{
+                                                        margin-top: 43px;
+                                                    }
+                                                    .participants-main-apply-tips{
+                                                        widows: 100%;
+                                                        margin-top: 23px;
+                                                        font-size: 16px;
+                                                        color: #FFFFFF;
+                                                        line-height: 28px;
+                                                        text-align: center;
+                                                        font-style: normal;
+                                                        text-transform: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .taskDetails-container-int{
+            width: 100%;
+            height: auto;
+            margin-top: 30px;
+            margin-bottom: 163px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, .16);
+            backdrop-filter: blur(52px);
+            .int-main{
+                width: 100%;
+                height: auto;
+                .int-title{
+                    width: 100%;
+                    height: 49px;
+                    .int-title-main{
+                        width: 149px;
+                        height: 49px;
+                        .int-title-main-block{
+                            display: flex;
+                            justify-content: center;
+                            .int-title-main-icon{
+                                width: 24px;
+                                margin-right: 7px;
+                                i{
+                                    font-size: 24px;
+                                    color: #FFFFFF;
+                                    display: block;
+                                    line-height: 49px;
+                                }
+                            }
+                            .int-title-main-name{
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: #FFFFFF;
+                                line-height: 49px;
+                                text-align: left;
+                                font-style: normal;
+                                text-transform: none;
+                            }
+                        }
+                    }
+                }
+                .int-content{
+                    padding: 40px 61px 51px 61px;
+                    .int-content-main{
+                        width: 100%;
+                        height: auto;
+                        .int-content-main-item{
+                            width: 100%;
+                            height: auto;
+                            margin-bottom: 40px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            .int-content-main-text{
+                                width: 65%;
+                                margin: 0 auto;
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: #FFFFFF;
+                                line-height: 28px;
+                                text-align: left;
+                                font-style: normal;
+                                text-transform: none;
+                            }
+                            .int-content-main-img{
+                                width: 65%;
+                                height: auto;
+                                overflow: hidden;
+                                margin: 0 auto;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 16px;
+                                }
+                            }
+                            .int-content-main-audio{
+                                width: 50%;
+                                margin: 0 auto;
+                                audio{
+                                    width: 100%;
+                                    border-radius: 16px;
+                                }
+                            }
+                            .int-content-main-video{
+                                width: 50%;
+                                margin: 0 auto;
+                                video{
+                                    width: 100%;
+                                    border-radius: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .takePart{
+            width: calc(100% - 740px);
+            padding-bottom: 66px;
+            position: fixed;
+            left: 530px;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            .takePart-but{
+                width: 190px;
+                height: 60px;
+                margin: 0 auto;
+                border-radius: 30px;
+                background: rgb(0, 0, 0, .6);
+                font-weight: 600;
+                font-size: 18px;
+                color: #FFFFFF;
+                line-height: 60px;
+                text-align: center;
+                font-style: normal;
+                text-transform: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgb(0, 0, 0, .7);
+                }
+            }
+            .noClick{
+                color: rgb(255, 255, 255, .7);
+                background: rgb(0, 0, 0, .5);
+                cursor: inherit;
+                &:hover{
+                    background: rgb(0, 0, 0, .5);
+                }
+            }
+            .takePart-operation{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .takePart-but{
+                    margin: 0 10px;
+                    &:first-child{
+                        background: rgb(0, 0, 0, .5);
+                    }
+                }
+            }
+            .takePart-but-list{
+                width: 100%;
+                height: auto;
+                .takePart-but-list-main{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    .takePart-but-list-main-item{
+                        width: 168px;
+                        height: 60px;
+                        cursor: pointer;
+                        margin-right: 12px;
+                        border-radius: 30px;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        background: rgb(0, 0, 0, .6);
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        &:hover{
+                            background-color: rgb(0, 0, 0, .7);
+                        }
+                        .takePart-but-list-main-item-icon{
+                            width: 24px;
+                            margin-right: 7px;
+                            i{
+                                font-size: 24px;
+                                color: #FFFFFF;
+                                display: block;
+                                line-height: 60px;
+                                text-align: center;
+                            }
+                        }
+                        .takePart-but-list-main-item-text{
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            line-height: 60px;
+                            text-align: left;
+                            font-style: normal;
+                            text-transform: none;
+                        }
+                        .takePart-but-list-main-item-module{
+                            width: 285px;
+                            position: absolute;
+                            left: -59px;
+                            bottom: 80px;
+                            border-radius: 24px;
+                            background: rgb(0, 0, 0, .4);
+                            border: 1px solid rgb(255, 255, 255, .38);
+                            .nodeList{
+                                width: 285px;
+                                height: auto;
+                                .nodeList-content{
+                                  width: 100%;
+                                  height: auto;
+                                  position: relative;
+                                  border-radius: 18px;
+                                  overflow: hidden;
+                                  .masking{
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    z-index: -1;
+                                    background: rgba(255,255,255,0.16);
+                                    backdrop-filter: blur(68px);
+                                  }
+                                  .nodeList-content-list{
+                                    padding: 30px 17px;
+                                    .timeline {
+                                      width: 100%;
+                                      height: auto;
+                                      border-radius: 10px;
+                                      .event {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: 10px;
+                                        position: relative;
+                                        margin-bottom: 32px;
+                                        &:last-child{
+                                          .connectingLine{
+                                            display: none;
+                                          }
+                                        }
+                                        .connectingLine{
+                                          width: 24px;
+                                          height: 24px;
+                                          position: absolute;
+                                          left: 5px;
+                                          top: 40px;
+                                          i{
+                                            font-size: 24px;
+                                            color: rgba(255, 255, 255, .6);
+                                            display: block;
+                                            text-align: center;
+                                            line-height: 24px;
+                                          }
+                                        }
+                                        .event-info{
+                                          flex: 1;
+                                          width: 0;
+                                          .event-info-main{
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            .icon {
+                                              width: 34px;
+                                              height: 35px;
+                                              flex-shrink: 0;
+                                              border-radius: 50%;
+                                              margin-right: 10px;
+                                              background-color: rgb(255, 255, 255, .16);
+                                              i{
+                                                font-size: 24px;  
+                                                color: rgb(0, 0, 0, .8);
+                                                line-height: 35px;
+                                                display: block;
+                                                text-align: center;
+                                              }
+                                            }
+                                            .iconBg{
+                                              background-color: rgb(255, 255, 255, .7);
+                                            }
+                                            .details {
+                                              flex: 1;
+                                              width: 0;
+                                              .date {
+                                                font-size: 16px;
+                                                color: rgb(255, 255, 255, .7);
+                                                line-height: 1;
+                                                text-align: left;
+                                                margin: 0 0 5px 0;
+                                              }
+                                              
+                                              .status {
+                                                font-size: 16px;
+                                                color: rgb(255, 255, 255, .7);
+                                                line-height: 1;
+                                                text-align: left;
+                                              }
+                                            }
+                                            .detailsColor{
+                                              color: #FFFFFF;
+                                            }
+                                          }
+                                        }
+                                        .event-but{
+                                          width: 88px;
+                                          height: 28px;
+                                          border-radius: 15px;
+                                          border: 1px solid rgba(255, 255, 255, .38);
+                                          .but{
+                                            width: 100%;
+                                            font-size: 14px;
+                                            color: rgb(255, 255, 255, .7);
+                                            line-height: 30px;
+                                            text-align: center;
+                                          }
+                                        }
+                                        .completed{
+                                          cursor: pointer;
+                                            border: 1px solid rgba(255, 255, 255, .8);
+                                          .but{
+                                            color: #FFFFFF;
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.clipPathNo {
+    top: 50%;
+    transform: translateY(-50%);
+    clip-path: none;
+}

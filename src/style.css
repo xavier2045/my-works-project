@@ -1,0 +1,423 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'PingFang SC' !important;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+a {
+  text-decoration: none;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.text-line-through{
+  text-decoration-line: line-through;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  /* 使图片保持原始宽高比填充容器 */
+  object-fit: cover;
+  /* 图片内容居中对齐 */
+  object-position: center;
+  /* 确保图片占据其父容器的全部空间 */
+}
+
+.textR{
+  text-align: right !important;
+}
+
+.maxHeightAuto{
+  max-height: initial !important;
+}
+.displayInitial{
+  display: initial !important;
+}
+
+.cursorPointer{
+  cursor: pointer;
+}
+.overflowInherit{overflow: inherit !important;}
+
+.relievoShadow{
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3), -1px -1px 6px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2), rgba(255, 255, 255, .1));
+}
+.relievoShadow:hover{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2), rgba(255, 255, 255, .2));
+  /* box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5), 0 -2px 5px rgba(255, 255, 255, 0.6); */
+}
+
+.close_relievoShadow{
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3), 0px -1px 4px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2), rgba(109, 109, 109, 0.1));
+}
+.close_relievoShadow:hover{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2), rgba(109, 109, 109, .2));
+  /* box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5), 0 -2px 5px rgba(255, 255, 255, 0.6); */
+}
+
+.no-data{
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  color: rgba(255, 255, 255, .8);
+}
+.height-100{
+  height: 100% !important;
+}
+.mat-0{
+  margin-top: 0px !important;
+}
+.mat-10{
+  margin-top: 10px !important;
+}
+.mat-20{
+  margin-top: 20px !important;
+}
+.mat-30{
+  margin-top: 30px !important;
+}
+.mat-40{
+  margin-top: 40px !important;
+}
+.mat-50{
+  margin-top: 50px !important;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+/* .icon{
+  background: linear-gradient(90deg, #ff0000, #00ff00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+/* 重置默认样式，确保各浏览器一致性 */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  margin: 0;
+  padding: 8px 12px; /* 内边距 */
+  font-size: 14px; /* 字体大小 */
+  line-height: 1.5; /* 行高 */
+  border-radius: 4px; /* 边框圆角 */
+  border: 1px solid #ccc; /* 边框颜色和宽度 */
+  outline: none; /* 移除焦点时的轮廓 */
+  box-sizing: border-box; /* 包含内边距和边框的盒模型 */
+}
+
+/* 输入框聚焦时的样式 */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: rgba(255,255,255,0.7); /* 聚焦时边框颜色 */
+}
+
+/* 修改文本颜色和背景色 */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  color: #111111; /* 文本颜色 */
+  background-color: #fff; /* 背景颜色 */
+}
+
+/* 自定义其他特定样式 */
+input[type="text"].small-input {
+  font-size: 12px; /* 更小的字体 */
+  padding: 4px; /* 减少内边距 */
+}
+
+/* 为错误状态设置样式 */
+input[type="text"].error,
+input[type="email"].error,
+input[type="password"].error {
+  border-color: #ff0000; /* 错误边框颜色 */
+}
+
+/* 修改placeholder的颜色、字体大小和样式 */
+input[type="text"]::placeholder {
+  color: rgb(255, 255, 255, 0.68); /* 提示文字颜色 */
+  font-size: 12px; /* 字体大小 */
+}
+
+/* 为了更好的兼容性，可以添加浏览器前缀 */
+input[type="text"]::-webkit-input-placeholder {
+  color: rgb(255, 255, 255, 0.68);
+  font-size: 12px;
+}
+
+input[type="text"]::-moz-placeholder { /* Firefox 19+ */
+  color: rgb(255, 255, 255, 0.68);
+  font-size: 12px;
+}
+
+input[type="text"]:-ms-input-placeholder { /* IE 10+ */
+  color: rgb(255, 255, 255, 0.68);
+  font-size: 12px;
+}
+
+input[type="text"]:-moz-placeholder { /* Firefox 18- */
+  color: rgb(255, 255, 255, 0.68);
+  font-size: 12px;
+}
+
+.multi-line-1 {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.multi-line-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.multi-line-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/* 头像光圈闪烁效果 */
+.flicker {
+  animation: anim 1s ease-in infinite;
+}
+@keyframes anim {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, .7);
+    }
+    25% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, .8);
+    }
+    50% {
+        box-shadow: 0 0 28px rgba(255, 255, 255, .9);
+    }
+    75% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, .8);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, .7);
+    }
+}
+
+/* 关注光圈闪烁效果 */
+.dynamicFlicker {
+  border: 2px solid #FFFFFF !important;
+  animation: dynamic 1s ease-in infinite;
+}
+@keyframes dynamic {
+    0% {
+        box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, .7);
+    }
+    25% {
+        box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, .8);
+    }
+    50% {
+        box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, .9);
+    }
+    75% {
+        box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, .8);
+    }
+    100% {
+        box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, .7);
+    }
+}
+
+.el-date-editor--daterange:focus-visible,
+.el-date-editor--daterange .el-input__inner:focus-visible {
+  outline: none;
+  border-color: initial; /* 恢复为初始边框颜色 */
+  box-shadow: none;
+}
+
+/* 滚动条 */
+.overflowYAuto{
+  overflow-y: auto;
+  &:focus-visible{
+      outline: none;
+  }
+  /* 火狐浏览器滚动条样式 */
+  @supports (-moz-appearance: none) {
+    scrollbar-width: thin;
+
+    ::-moz-scrollbar-track {
+        background-color: rgba(225,225,225,0);  /* 轨道颜色 */
+        border-radius: 2px;
+    }
+
+    ::-moz-scrollbar-thumb {
+        background-color: rgba(225,225,225,0.2);  /* 滑块颜色 */
+        border-radius: 2px;
+        width: 4px;
+    }
+
+    ::-moz-scrollbar-thumb:hover {
+    background-color: rgba(225,225,225,0.2);  /* 悬停时滑块颜色 */
+    }
+  }
+  /* 通用滚动条样式 */
+  &::-webkit-scrollbar { /* 整个滚动条 */
+      width: 4px; /* 滚动条宽度 */
+  }
+  &::-webkit-scrollbar-track { /* 滚动条轨道 */
+      background: rgba(225,225,225,0); 
+  }
+  &::-webkit-scrollbar-thumb { /* 滚动条滑块 */
+      background: rgba(225,225,225,0.2); 
+      border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb:hover { /* 鼠标悬停时滚动条滑块样式 */
+      background: rgba(225,225,225,0.2); 
+  }
+}
+
+textarea, input{
+  font-family: 'PingFang SC' !important;
+  -webkit-appearance: none; /* 对于 WebKit 浏览器，移除默认样式 */
+  -moz-appearance: none; /* 对于 Firefox 浏览器，移除默认样式 */
+  appearance: none; /* 标准属性，移除默认样式 */
+}
+
+.el-message{
+  border: none;
+  background-color: rgba(255, 255, 255, 0.16) !important;
+  backdrop-filter: blur(40px) !important;
+}
+
+.el-message--error {
+  background-color: rgba(255, 255, 255, 0.16) !important;
+  backdrop-filter: blur(40px) !important;
+}
+/* .el-message .el-message-icon--error{
+  
+} */
+
+.el-message--error .el-message__content {
+  color: #FFFFFF !important;
+}
+
+.height-100{
+  height: 100%;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.errorTips{
+  width: 234px;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, .38);
+  position: fixed;
+  top: calc(50% - 70px);
+  left: calc(50% + 80px);
+  z-index: 9;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  .errorTips-main{
+    padding: 0 28px;
+    position: relative;
+    .mask{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, .35);
+      backdrop-filter: blur(9px);
+    }
+    .errorTips-main-content{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      .errorTips-main-icon{
+        width: 24px;
+        height: auto;
+        flex-shrink: 0;
+        margin-right: 12px;
+        cursor: pointer;
+        i{
+          font-size: 24px;
+          color: #FFFFFF;
+          line-height: 48px;
+          display: block;
+        }
+      }
+      .errorTips-main-text{
+        font-size: 16px;
+        color: #FFFFFF;
+        line-height: 48px;
+        text-align: left;
+      }
+    }
+  }
+}
+.focused{
+  border-radius: 12px !important;
+  background-color: rgba(255, 255, 255, .1) !important;
+  border-color: #f00 !important;
+}
+
+/* 禁止选中所有元素的内容 */
+.no-select {
+  user-select: none; /* 标准语法 */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ */
+}
+
+.list-item-tips{
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  color: rgb(255, 255, 255, .7);
+}
+
+/* 缓动效果 */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up-item {
+  animation: fadeUp 0.5s ease-out forwards;
+}
+

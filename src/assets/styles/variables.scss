@@ -1,0 +1,434 @@
+.comment-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .reply-tag {
+    color: #007aff;
+    font-weight: bold;
+  }
+  
+  .comment-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+  }
+  
+  .like-btn, .reply-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .liked {
+    color: red;
+  }
+  
+  .reply-box {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    textarea {
+      width: 100% !important;
+      min-height: 40px;
+      border-radius: 5px;
+      background: transparent;
+      outline: none;
+      margin-bottom: 5px;
+      border: none;
+      margin: 5px;
+      font-size: 14px;
+      line-height: 1.5;
+      resize: none;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .reply-buttons{
+      width: 100%;
+      height: 42px;
+      display: flex;
+      justify-content: flex-end;
+      .but {
+        padding: 5px 10px;
+        cursor: pointer;
+        border: none;
+        color: rgba(255, 255, 255, 0.68);
+        line-height: 32px;
+      }
+    }
+  }
+  
+  .comment-item {
+      width: 100%;
+      height: auto;
+      margin-bottom: 16px;
+      .comment {
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: flex-start;
+          .avatar {
+              width: 40px;
+              height: 40px;
+              flex-shrink: 0;
+              border-radius: 50%;
+              overflow: hidden;
+              margin-right: 10px;
+              background: url(@/assets/images/task/avatar_bg.png) no-repeat center center;
+              background-size: 100% 100%;
+              :deep(.el-image, img) {
+                  width: 70%;
+                  height: 70%;
+                  border-radius: 50%;
+                  display: block;
+                  margin: 15% auto;
+              }
+          }
+          .comment-content {
+              flex: 1;
+              width: 0;
+              .comment-header{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                .comment-info{
+                  width: 100%;
+                  height: auto;
+                  display: flex;
+                  justify-content: space-between;
+                  .username{
+                    flex: 1;
+                    width: 1;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    line-height: 1;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                  }
+                  .cmnt{
+                    width: 90px;
+                    flex-shrink: 0;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    line-height: 1;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                    position: relative;
+                    .cmnt-click{
+                      width: 30px;
+                      height: auto;
+                      cursor: pointer;
+                      border-radius: 6px;
+                      float: right;
+                      &:hover{
+                        background: rgba(255, 255, 255, 0.1);
+                      }
+                      i{
+                        font-size: 24px;
+                        display: block;
+                        text-align: center;
+                      }
+                    }
+                    .cmnt-item{
+                      width: 79px;
+                      height: auto;
+                      position: absolute;
+                      top: 10px;
+                      right: 50px;
+                      z-index: 1;
+                      .item-but{
+                        width: 79px;
+                        font-size: 12px;
+                        text-align: center;
+                        line-height: 26px; 
+                        color: rgba(255, 255, 255, 1);
+                        display: block;
+                        margin-bottom: 1px;
+                        padding: 0 10px;
+                        border-radius: 13px;
+                        cursor: pointer;
+                        margin-bottom: 5px;
+                        box-shadow: 1px 3px 9px rgba(44, 44, 44, 0.5), /* 外发光 */
+                            -1px 1px 3px rgba(255, 255, 255, 0.2) inset; /* 内发光 */
+                        border: 1px solid rgba(0, 0, 0, 0.01);
+                        background: rgba(58, 55, 55, 0.1);
+                        backdrop-filter: blur(9px);
+                        &:last-child{
+                          margin-bottom: 0;
+                        }
+                        &:hover{
+                          box-shadow: 1px 3px 9px rgba(44, 44, 44, 0.6), /* 外发光 */
+                            -1px 1px 3px rgba(255, 255, 255, 0.3) inset; /* 内发光 */
+                          border: 1px solid rgba(0, 0, 0, 0.01);
+                          background: rgba(58, 55, 55, 0.1);
+                        }
+                      }
+                    }
+                  }
+                }
+                
+              }
+              .comment-text{
+                width: 100%;
+                height: auto;
+                margin-top: 10px;
+                .content{
+                  font-size: 14px;
+                  color: #FFFFFF;
+                  line-height: 1.3;
+                  text-align: left;
+                  font-style: normal;
+                  text-transform: none;
+                }
+              }
+              .item-content{
+                  width: 100%;
+                  height: auto;
+                  margin: 15px 0;
+                  font-size: 16px;
+                  color: #FFFFFF;
+                  line-height: 1.5;
+                  text-align: left;
+                  font-style: normal;
+                  text-transform: none;
+              }
+              .actions {
+                  width: 100%;
+                  height: auto;
+                  margin-top: 8px;
+                  display: flex;
+                  justify-content: space-between;
+                  .actions-options{
+                      display: inline-block;
+                      .options-item{
+                          display: flex;
+                          justify-content: flex-start;
+                          .item-but{
+                              cursor: pointer;
+                              display: inline-block;
+                              i{
+                                  font-size: 16px;
+                                  color: #FFFFFF;
+                                  line-height: 1;
+                                  text-align: left;
+                                  font-style: normal;
+                                  text-transform: none; 
+                                  margin: 0 8px;
+                              }
+                              span{
+                                  font-size: 16px;
+                                  color: #FFFFFF;
+                                  line-height: 1;
+                                  text-align: left;
+                                  font-style: normal;
+                                  text-transform: none; 
+                              }
+                          }
+                      }
+                  }
+                  .actions-date{
+                      font-size: 14px;
+                      color: rgba(255, 255, 255, 0.68);
+                      line-height: 1;
+                      text-align: left;
+                      font-style: normal;
+                      text-transform: none;
+                      .date{
+                          display: block;
+                      }
+                  }
+              }
+              .openAComment{
+                display: block;
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.68);
+                line-height: 1;
+                text-align: left;
+                margin-top: 23px;
+                cursor: pointer;
+              }
+          }
+      }
+      .reply-input textarea {
+          width: 100%;
+          margin-top: 8px;
+          padding: 8px;
+      }
+      .replies {
+          margin-top: 12px;
+          transition: all 0.3s ease;
+          .load-more-replies{
+            width: 100%;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.68);
+            line-height: 1;
+            text-align: center;
+            cursor: pointer;
+            margin: 10px 0 20px 0;
+          }
+          .reply {
+              width: 100%;
+              display: flex;
+              justify-content: flex-start;
+              .avatar {
+                  width: 40px;
+                  height: 40px;
+                  flex-shrink: 0;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  margin-right: 10px;
+                  background: url(@/assets/images/task/avatar_bg.png) no-repeat center center;
+                  background-size: 100% 100%;
+                  :deep(.el-image, img) {
+                      width: 70%;
+                      height: 70%;
+                      border-radius: 50%;
+                      display: block;
+                      margin: 15% auto;
+                  }
+              }
+              .reply-content{
+                  flex: 1;
+                  width: 0;
+                  .header{
+                      width: 100%;
+                      height: auto;
+                      display: flex;
+                      justify-content: space-between;
+                      .username{
+                          font-size: 16px;
+                          color: #FFFFFF;
+                          line-height: 1;
+                          text-align: left;
+                          font-style: normal;
+                          text-transform: none;
+                      }
+                      .cmnt{
+                          font-size: 16px;
+                          color: #FFFFFF;
+                          line-height: 1;
+                          text-align: left;
+                          font-style: normal;
+                          text-transform: none;
+                          position: relative;
+                          .cmnt-click{
+                              width: 30px;
+                              height: auto;
+                              cursor: pointer;
+                              border-radius: 6px;
+                              &:hover{
+                                  background: rgba(255, 255, 255, 0.1);
+                              }
+                              i{
+                                  font-size: 24px;
+                                  display: block;
+                                  text-align: center;
+                              }
+                          }
+                          .cmnt-item{
+                              width: 79px;
+                              height: auto;
+                              position: absolute;
+                              top: 10px;
+                              right: 50px;
+                              z-index: 1;
+                              .item-but{
+                                  width: 79px;
+                                  font-size: 12px;
+                                  text-align: center;
+                                  line-height: 26px; 
+                                  color: rgba(255, 255, 255, 1);
+                                  display: block;
+                                  margin-bottom: 1px;
+                                  padding: 0 10px;
+                                  border-radius: 13px;
+                                  cursor: pointer;
+                                  box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.5), /* 外发光 */
+                                      -1px 1px 3px rgba(255, 255, 255, 0.5) inset; /* 内发光 */
+                                  border: 1px solid rgba(0, 0, 0, 0.01);
+                                  background: rgba(0, 0, 0, 0.5);
+                                  backdrop-filter: blur(9px);
+                                  &:last-child{
+                                      margin-bottom: 0;
+                                  }
+                                  &:hover{
+                                      box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.2), /* 外发光 */
+                                          -1px 1px 3px rgba(255, 255, 255, 0.2) inset; /* 内发光 */
+                                      border: 1px solid rgba(0, 0, 0, 0.01);
+                                      background: rgba(0, 0, 0, 0.3);
+                                  }
+                              }
+                          }
+                      }
+                  }
+                  .item-content{
+                      width: 100%;
+                      height: auto;
+                      margin: 15px 0;
+                      font-size: 16px;
+                      color: #FFFFFF;
+                      line-height: 1.5;
+                      text-align: left;
+                      font-style: normal;
+                      text-transform: none;
+                  }
+                  .actions {
+                      width: 100%;
+                      height: auto;
+                      margin-top: 8px;
+                      display: flex;
+                      justify-content: space-between;
+                      .actions-options{
+                          display: inline-block;
+                          .options-item{
+                              display: flex;
+                              justify-content: flex-start;
+                              .item-but{
+                                  cursor: pointer;
+                                  display: inline-block;
+                                  i{
+                                      font-size: 16px;
+                                      color: #FFFFFF;
+                                      line-height: 1;
+                                      text-align: left;
+                                      font-style: normal;
+                                      text-transform: none; 
+                                      margin: 0 8px;
+                                  }
+                                  span{
+                                      font-size: 16px;
+                                      color: #FFFFFF;
+                                      line-height: 1;
+                                      text-align: left;
+                                      font-style: normal;
+                                      text-transform: none; 
+                                  }
+                              }
+                          }
+                          .openAComment{
+                              display: block;
+                          }
+                      }
+                      .actions-date{
+                          font-size: 14px;
+                          color: rgba(255, 255, 255, 0.68);
+                          line-height: 1;
+                          text-align: left;
+                          font-style: normal;
+                          text-transform: none;
+                          .date{
+                              display: block;
+                          }
+                      }
+                  }
+              }
+          }
+          
+      }
+    }

@@ -1,0 +1,221 @@
+// 基础样式
+.ability-graph {
+  width: 100%;
+  height: 100%;
+  background: #2f2f2f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ability-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 中心球样式
+.main-circle {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2),
+              inset 0 0 20px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: all 0.5s ease;
+  z-index: 10;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3),
+                inset 0 0 25px rgba(255, 255, 255, 0.2);
+  }
+}
+
+// 小球样式
+.sub-circle {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15),
+              inset 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  transform-origin: center center;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform, filter;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3),
+                inset 0 0 20px rgba(255, 255, 255, 0.2);
+    z-index: 10;
+  }
+}
+
+// 连接线和脉冲点
+.connections {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.pulse-dot {
+  fill: white;
+  r: 3;
+  filter: blur(1px);
+}
+
+// 细胞核和细胞质
+.nucleus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  box-shadow: 
+    inset 0 0 15px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+  mix-blend-mode: screen;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle at 40% 40%,
+      rgba(255, 255, 255, 0.4) 0%,
+      transparent 60%
+    );
+  }
+}
+
+.cytoplasm {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+// 神经元突起效果
+.neuron-shape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  filter: blur(1px);
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  backface-visibility: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: radial-gradient(circle at center, currentColor 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    width: 130%;
+    height: 130%;
+    left: -15%;
+    top: -15%;
+    transform: rotate(-45deg);
+  }
+}
+
+// 波纹效果
+.ripple-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ripple {
+  position: absolute;
+  border: 2px solid;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0;
+  mix-blend-mode: soft-light;
+  transform-origin: center center;
+  pointer-events: none;
+  box-shadow: 0 0 5px currentColor;
+  will-change: opacity, transform;
+}
+
+// 底部文字样式
+.bottom-text {
+  position: fixed;
+  bottom: 40px;
+  text-align: center;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Arial, sans-serif;
+
+  .company-name {
+    font-size: 32px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+
+  .company-cn {
+    font-size: 24px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+  }
+
+  .slogan {
+    font-size: 18px;
+    font-style: italic;
+    opacity: 0.7;
+    letter-spacing: 1px;
+  }
+} 

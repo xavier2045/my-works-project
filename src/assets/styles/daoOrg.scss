@@ -1,0 +1,502 @@
+.dao {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1000px; /* 设置3D效果视角 */
+    position: relative;
+    .dao-bg{
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    .dao-container{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      .dao-header{
+        width: 100%;
+        height: 85px;
+      }
+      .dao-centnet{
+        width: 100%;
+        flex-grow: 1;
+        .suspMenu-view{
+          width: 54px;
+          position: fixed;
+          top: 50%;
+          left: 100px;
+          transform: translateY(-50%);
+          .suspMenu-view-pos{
+              width: 100%;
+              height: 100%;
+              .suspMenu-view-main{
+                  width: 100%;
+                  height: auto;
+                  border-radius: 26px;
+                  border: 1px solid rgba(255, 255, 255, .15);
+                  background: rgba(23, 23, 54, .45);
+                  backdrop-filter: blur(10px);
+                  position: relative;
+                  ul{
+                      margin: 0;
+                      padding: 0;
+                      padding: 16px 8px;
+                      li{
+                          width: 36px;
+                          height: 36px;
+                          border-radius: 50%;
+                          list-style-type: none;
+                          margin-bottom: 15px;
+                          a{
+                              width: 100%;
+                              height: 100%;
+                              display: block;
+                              text-align: center;
+                              i{
+                                  font-size: 24px;
+                                  color: rgba(255, 255, 255, .65);
+                                  display: block;
+                                  line-height: 36px;
+                              }
+                          }
+                          i{
+                              width: 100%;
+                              font-size: 24px;
+                              color: rgba(255, 255, 255, .65);
+                              text-align: center;
+                              line-height: 36px;
+                              display: block;
+                              cursor: pointer;
+                          }
+                          &:hover{
+                            box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.6), 0 -2px 5px rgba(99, 99, 217, 0.4);
+                            background: linear-gradient(to bottom, rgba(60, 60, 150, .4), rgba(40, 40, 100, .3));
+                            i{
+                                color: #FFFFFF;
+                            }
+                          }
+                          &:last-child{
+                              margin-bottom: 0;
+                          }
+                      }
+                      .flag{
+                        box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.6), 0 -2px 5px rgba(99, 99, 217, 0.4);
+                        background: linear-gradient(to bottom, rgba(60, 60, 150, .4), rgba(40, 40, 100, .3));
+                        i{
+                            color: #FFFFFF;
+                        }
+                      }
+                  }
+              }
+          }
+        }
+        .dao-centnet-main{
+          width: 1500px;
+          height: 100%;
+          margin: 0 auto;
+          overflow-y: auto;
+          position: relative;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+              display: none;
+          }
+          .hovered-image {
+            position: absolute;
+            z-index: 9999;
+            width: 352px;
+            height: 352px;
+            pointer-events: none; /* 确保图片不会干扰鼠标事件 */
+            transform: translate(-50%, -50%); /* 使图片居中 */
+            img{
+              width: 100%;
+              height: 100%;
+              display: block;
+            }
+          }
+          .section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            -webkit-animation-name: fadeOutRight;
+            animation-name: fadeOutRight;
+            cursor: grab; /* 设置拖动时的光标样式 */
+            transition: transform 0.5s ease;
+            transform-style: preserve-3d; /* 保持3D变换效果 */
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+            .dao-grid {
+              height: auto;
+              .grid-demo{
+                width: 100%;
+                height: 100%;
+                .dao-item {
+                  width: 232px;
+                  height: auto;
+                  padding: 10px;
+                  cursor: pointer;
+                  position: relative;
+                  background-color: rgba(255, 255, 255, .06);
+                  backdrop-filter: blur(20px);
+                  :hover{
+                    .dao-item-pic {
+                      .dao-item-pic-main{
+                        img {
+                          transform: scale(1.1);
+                        }
+                      }
+                      
+                    }
+                  }
+                  .dao-item-masking{
+                    width: calc(100% - 59px) !important;
+                    height: calc(100% - 60px) !important;
+                    border: 10px solid #FFFFFF !important;
+                    border-radius: 18px;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    z-index: 3;
+                    display: none;
+                  }
+                  .dao-item-shadow{
+                    width: calc(100% - 59px) !important;
+                    height: calc(100% - 60px) !important;
+                    border: 10px solid #FFFFFF !important;
+                    border-radius: 18px;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    z-index: 2;
+                    display: none;
+                  }
+                  .dao-item-content {
+                    width: 100%;
+                    position: relative;
+                    border-radius: 18px;
+                    overflow: hidden;
+                    background: rgba(229, 229, 229, 0.08);
+                    backdrop-filter: blur(40px);
+                    box-shadow: 0px 0px 56px 1px rgba(0,0,0,0.12);
+                    .dao-item-pic {
+                      padding: 6px;
+                      .dao-item-pic-main{
+                        width: 100%;
+                        height: 208px;
+                        border-radius: 18px;
+                        overflow: hidden;
+                        position: relative;
+                        img {
+                          width: 100%;
+                          height: 100%;
+                          display: block;
+                          border-radius: 18px;
+                          transition: all 1s;
+                        }
+                      }
+                    }
+                    .dao-item-type{
+                      display: inline-block;
+                      position: absolute;
+                      top: 20px;
+                      left: 20px;
+                      i{
+                        font-size: 36px;
+                        color: #FFFFFF;
+                      }
+                    }
+                    .dao-item-info {
+                      height: auto;
+                      padding: 0 23px;
+                      .dao-item-info-main{
+                        width: 100%;
+                        height: auto;
+                        .dao-item-info-main-t{
+                          width: 100%;
+                          display: flex;
+                          margin: 18.5px 0 14.5px 0;
+                          .dao-name{
+                            flex: 1;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            line-height: 1;
+                            text-align: center;
+                            font-style: normal;
+                            text-transform: none;
+                            overflow:hidden;
+                            text-overflow: ellipsis;
+                            -webkit-line-clamp: 1;
+                            line-clamp: 1;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                          }
+                        }
+                      }
+                      .dao-info-author {
+                        font-size: 20px;
+                      }
+                      .dao-info-content {
+                        font-size: 16px;
+                        overflow:hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 2;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                      }
+                    }
+                    @media (max-width: 576px) {
+                      .dao-item-info {
+                        width: calc(100% - 46px);
+                        padding: 0 23px;
+                        .dao-item-info-main{
+                          .dao-name{
+                            font-size: 60px;
+                          }
+                          .dao-data{
+                            .dao-data-main{
+                              .item-title{
+                                font-size: 56px;
+                              }
+                              .item-value{
+                                font-size: 58px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    @media (min-width: 576px) {
+                      .dao-item-info {
+                        width: calc(100% - 46px);
+                        padding: 0 23px;
+                        .dao-item-info-main{
+                          .dao-name{
+                            font-size: 80px;
+                          }
+                          .dao-data{
+                            .dao-data-main{
+                              .item-title{
+                                font-size: 76px;
+                                margin-bottom: 55px;
+                              }
+                              .item-value{
+                                font-size: 78px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    @media (min-width: 768px) {
+                      .dao-item-info {
+                        width: calc(100% - 46px);
+                        padding: 0 23px;
+                        .dao-item-info-main{
+                          .dao-name{
+                            font-size: 40px;
+                          }
+                          .dao-data{
+                            .dao-data-main{
+                              .item-title{
+                                font-size: 36px;
+                                margin-bottom: 15px;
+                              }
+                              .item-value{
+                                font-size: 38px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }@media (min-width: 992px) {
+                      .dao-item-info {
+                        width: calc(100% - 46px);
+                        padding: 0 23px;
+                        .dao-item-info-main{
+                          .dao-name{
+                            font-size: 40px;
+                          }
+                          .dao-data{
+                            .dao-data-main{
+                              .item-title{
+                                font-size: 36px;
+                                margin-bottom: 15px;
+                              }
+                              .item-value{
+                                font-size: 38px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    @media (min-width: 1200px) {
+                      .dao-item-info {
+                        width: calc(100% - 46px);
+                        padding: 0 23px;
+                        .dao-item-info-main{
+                          .dao-name{
+                            font-size: 40px;
+                          }
+                          .dao-data{
+                            .dao-data-main{
+                              .item-title{
+                                font-size: 16px;
+                                margin-bottom: 10px;
+                              }
+                              .item-value{
+                                font-size: 18px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    @media (min-width: 1600px) {
+                      .dao-item-info {
+                        width: calc(100% - 46px);
+                        padding: 0 23px;
+                        .dao-item-info-main{
+                          .dao-name{
+                            font-size: 20px;
+                          }
+                          .dao-data{
+                            .dao-data-main{
+                              .item-title{
+                                font-size: 16px;
+                                margin-bottom: 6px;
+                              }
+                              .item-value{
+                                font-size: 18px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    @media (min-width: 1920px) {
+                      .dao-item-info {
+                        width: calc(100% - 46px);
+                        padding: 0 23px;
+                        .dao-item-info-main{
+                          .dao-name{
+                            font-size: 20px;
+                          }
+                          .dao-data{
+                            .dao-data-main{
+                              .item-title{
+                                font-size: 16px;
+                                margin-bottom: 6px;
+                              }
+                              .item-value{
+                                font-size: 18px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .highlight-cl-w {
+                display: block !important;
+              }
+              .highlight-cl-b {
+                display: block !important;
+              }
+              .shadow-white1{
+                box-shadow: 0 0 30px 7px rgb(255, 255, 255, 0.76);
+              }
+              .shadow-white2{
+                box-shadow: 0 0 30px 7px rgb(255, 255, 255, 0.76);
+              }
+              .shadow-white3{
+                box-shadow: 0 0 30px 7px rgb(255, 255, 255, 0.76);
+              }
+              .shadow-white4{
+                box-shadow: 0 0 30px 7px rgb(255, 255, 255, 0.76);
+              }
+              .shadow-black1{
+                box-shadow: -25px -10px 46px 7px rgb(0, 0, 0, 0.46) !important;
+              }
+              .shadow-black2{
+                box-shadow: 25px -10px 46px 7px rgb(0, 0, 0, 0.46) !important;
+              }
+              .shadow-black3{
+                box-shadow: -25px 10px 46px 7px rgb(0, 0, 0, 0.46) !important;
+              }
+              .shadow-black4{
+                box-shadow: 25px 10px 46px 7px rgba(0, 0, 0, 0.46) !important;
+              }
+            }
+          }
+          .section.active {
+            z-index: 2;
+          }
+          .grid-item.shattered {
+            transition: none; /* 破碎效果时禁用过渡 */
+          }
+          .fadeOutRight {
+            
+            -webkit-animation-name: fadeOutRight;
+            animation-name: fadeOutRight;
+          }
+          @keyframes fadeOutRight {
+            0% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              -webkit-transform: translate3d(100%, 0, 0);
+              transform: translate3d(100%, 0, 0);
+            }
+          }
+        }
+        
+      }
+      .personal-footer{
+          width: 1500px;
+          height: 68px;
+          margin: 0 auto;
+          .PartingLine{
+            width: 100%;
+            height: 1px;
+            background-color: transparent;
+          }
+          .foot-content{
+            width: 100%;
+            clear: both;
+            font-weight: 400;
+            font-size: 16px;
+            color: #FFFFFF;
+            line-height: 68px;
+            .foot-content-l{
+              float: left;
+            }
+            .foot-content-r{
+              float: right;
+              i{
+                margin: 0 8px;
+                font-style: normal;
+              }
+            }
+          }
+      }
+    }
+    
+  }

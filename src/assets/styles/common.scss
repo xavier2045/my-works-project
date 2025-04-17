@@ -1,0 +1,263 @@
+// back按钮
+.back{
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  margin-left: 10px;
+  background: url(@/assets/images/task/back_bg.png) no-repeat center center;
+  background-size: 100% 100%;
+  &:hover{
+      background: url(@/assets/images/task/back_bg_hover.png) no-repeat center center;
+      background-size: 100% 100%;
+  }
+  .previous-icon{
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      i{
+          font-size: 24px;
+          color: #FFFFFF;
+          line-height: 72px;
+          text-align: center;
+          display: block;
+      }
+  }
+}
+
+// 搜索
+.search{
+  width: 100%;
+  height: 72px;
+  background: url(@/assets/images/task/search_bg.png) no-repeat center center;
+  background-size: 100% 100%;
+  &:hover{
+    background: url(@/assets/images/task/search_bg_hover.png) no-repeat center center;
+    background-size: 100% 100%;
+  }
+  .search-main{
+      padding: 0 30px;
+      display: flex;
+      cursor: pointer;
+      .search-icon{
+          width: 24px;
+          i{
+              font-size: 24px;
+              color: rgba(255, 255, 255, .8);
+              display: block;
+              margin-right: 6px;
+              line-height: 72px;
+          }
+      }
+      .search-input{
+          flex-grow: 1;
+          width: 0;
+          height: 72px;
+          input{
+              width: 100%;
+              height: 100%;
+              border: none;
+              outline: none;
+              font-size: 16px;
+              color: rgba(255, 255, 255, .9);
+              line-height: 72px;
+              display: block;
+              background-color: inherit;
+          }
+          input[type="text"]::placeholder {
+              color: rgb(255, 255, 255, 0.68);
+              font-size: 16px;
+          }
+      }
+      .search-clear{
+          width: 24px;
+          i{
+              font-size: 24px;
+              color: rgba(255, 255, 255, .6);
+              display: block;
+              margin-right: 6px;
+              line-height: 72px;
+          }
+      }
+  }
+}
+
+// 按钮
+.ae-btn{
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+  background: url(@/assets/images/task/publish_bg.png) no-repeat center center;
+  background-size: 100% 100%;
+  &:hover{
+      background: url(@/assets/images/task/publish_bg_hover.png) no-repeat center center;
+      background-size: 100% 100%;
+  }
+  a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+  }
+  .exhibit-publish-main{
+      width: 100%;
+      display: flex;
+      cursor: pointer;
+      justify-content: center;
+      .exhibit-publish-icon{
+          width: 24px;
+          flex-shrink:0;
+          margin-right: 10px;
+          i{
+              font-size: 24px;
+              line-height: 72px;
+              color: rgba(255, 255, 255, .8);
+              display: block;
+          }
+      }
+      .exhibit-publish-name{
+          display: inline-block;
+          font-weight: 400;
+          font-size: 16px;
+          color: rgb(255, 255, 255, 0.68);
+          line-height: 72px;
+          text-align: left;
+          font-style: normal;
+          text-transform: none;
+      }
+  }
+}
+
+// textarea 的背景图
+.textareaBg{
+    position: relative;
+    padding-right: 0;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .textarea_bg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        display: flex;
+        border-radius: 13px;
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3), 0px -1px 4px rgba(255, 255, 255, 0.2);
+        &:hover{
+            box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5), 0 -2px 5px rgba(255, 255, 255, 0.6);
+        }
+        .textarea_bg_t{
+        width: 77px;
+        height: 100%;
+        flex-shrink: 0;
+        background: url(@/assets/images/publish/left.png) no-repeat top left;
+        background-size: 100% 100%;
+        }
+        .textarea_bg_c{
+        flex-grow: 1;
+        height: 100%;
+        background: url(@/assets/images/publish/center.png) center center;
+        background-size: 100% 100%;
+        }
+        .textarea_bg_b{
+        width: 22px;
+        height:  100%;
+        flex-shrink: 0;
+        background: url(@/assets/images/publish/right.png) no-repeat top right;
+        background-size: 100% 100%;
+        }
+    }
+}
+
+// input或者下拉框的背景图
+.inputBg{
+    position: relative;
+    padding-right: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    // &:hover{
+    //     .input_bg{
+    //         box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5), 0 -2px 5px rgba(255, 255, 255, 0.6);
+    //         // background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2), rgba(255, 255, 255, .2));
+    //     }
+    // }
+    .input_bg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -1px;
+        right: -1px;
+        bottom: 0;
+        z-index: -1;
+        display: flex;
+        overflow: hidden;
+        border-radius: 13px;
+        // box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3), 0px -1px 4px rgba(255, 255, 255, 0.2);
+        // background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2), rgba(255, 255, 255, .1));
+        // &:hover{
+        //     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5), 0 -2px 5px rgba(255, 255, 255, 0.6);
+        //     // background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2), rgba(255, 255, 255, .2));
+        // }
+        .input_bg_l{
+        width: 70px;
+        height: 100%;
+        flex-shrink: 0;
+        background: url(@/assets/images/publish/sleft.png) no-repeat top left;
+        background-size: 100% 100%;
+        }
+        .input_bg_c{
+        flex-grow: 1;
+        height: 100%;
+        background: url(@/assets/images/publish/scenter.png) center center;
+        background-size: 100% 100%;
+        }
+        .input_bg_r{
+        width: 18px;
+        height:  100%;
+        flex-shrink: 0;
+        background: url(@/assets/images/publish/sright.png) no-repeat top right;
+        background-size: 100% 100%;
+        }
+    }
+}
+
+// 带图标的按钮
+.ae-button{
+    width: 97px;
+    height: 46px;
+    border-radius: 12px;
+    .button-mian{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            cursor: pointer;
+            justify-content: center;
+        .button-mian-icon{
+            font-size: 20px;
+            text-align: center;
+            line-height: 46px;
+            color: rgb(255, 255, 255, .7);
+        }
+        .button-main-text{
+            font-weight: 400;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 46px;
+        }
+    }
+}
+
+/* Global style for navigation menu position */
+.suspMenu-view {
+  position: absolute !important;
+  left: 0px !important;
+  z-index: 10 !important;
+}
+
